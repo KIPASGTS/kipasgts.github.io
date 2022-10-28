@@ -1,0 +1,1 @@
+[{"id":1,"headerText":"Hello World","contentText":"This is news","language":"EN","newsType":"0","imagePath":"/file/get/MsMiaow.png","targetUrl":"","timestamp":"2022-10-28T00:00:00"}]
