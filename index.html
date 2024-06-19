@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KIPASGTS adalah seorang modder game Stumble Guys yang dikenal juga dengan nama Haikal atau Ekal.">
+    <meta name="description" content="KIPASGTS adalah seorang modder game Stumble Guys yang dikenal juga dengan nama Haikal atau Ekal. Lihat portofolio mod game dan modifikasi yang telah dibuatnya di sini.">
     <meta name="keywords" content="KIPASGTS, Haikal, Ekal, Stumble Guys, mod game, modding game, portofolio modifikasi game">
     <meta name="robots" content="index, follow">
     <meta name="author" content="KIPASGTS">
@@ -72,7 +72,12 @@
         .text-section h1 {
             margin: 0;
             font-size: 2.5em;
-            color: #00796b;
+            color: #00796b; /* Warna teks di mode terang */
+            animation: shineAnimation 2s infinite;
+        }
+
+        .portfolio-box.dark .text-section h1 {
+            color: #eceff1; /* Warna teks di mode gelap */
         }
 
         .text-section p {
@@ -103,6 +108,18 @@
             }
             to {
                 transform: rotate(360deg);
+            }
+        }
+
+        @keyframes shineAnimation {
+            0% {
+                text-shadow: 0 0 5px rgba(0, 121, 107, 0.7); /* Warna dan intensitas bayangan di mode terang */
+            }
+            50% {
+                text-shadow: 0 0 10px rgba(128, 203, 196, 0.9); /* Warna dan intensitas bayangan di tengah animasi */
+            }
+            100% {
+                text-shadow: 0 0 5px rgba(0, 121, 107, 0.7); /* Kembali ke warna dan intensitas awal */
             }
         }
 
@@ -201,7 +218,6 @@
             }
             isPlaying = !isPlaying;
         }
-        //
 
         document.getElementById('backgroundMusic').addEventListener('ended', () => {
             document.getElementById('mainImage').classList.remove('rotate');
