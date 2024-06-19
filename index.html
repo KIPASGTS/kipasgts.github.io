@@ -1,28 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KIPASGTS adalah seorang modder game Stumble Guys yang dikenal juga dengan nama Haikal atau Ekal. Lihat portofolio mod game dan modifikasi yang telah dibuatnya di sini.">
+    <meta name="keywords" content="KIPASGTS, Haikal, Ekal, Stumble Guys, mod game, modding game, portofolio modifikasi game">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="KIPASGTS">
+    <title>Portofolio KIPASGTS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e0f7fa;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-        <title>HEKED BY KIPASGTS</title>
+        body.dark-theme {
+            background-color: #263238;
+            color: #eceff1;
+        }
 
-        <meta name="description" content="KIPASGTS - Discover more about KIPASGTS and explore our resources.">
-        <meta name="keywords" content="KIPASGTS, web development, resources">
-        <meta name="robots" content="index, follow">
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
 
-        <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+        .portfolio-box {
+            background-color: #ffffff;
+            border: 2px solid #00796b;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            color: #4e4e4e;
+            position: relative;
+        }
 
-        <link type="text/css" rel="stylesheet" href="assets/error.css" />
-    </head>
-    <body>
-        <div id="notfound">
-            <div class="notfound">
-                <div class="notfound-404"></div>
-                <h2>1337 Web Heked</h2>
-                <p>Halaman yang Anda tuju sudah ke hek, silahkan coba method lain dek.</p>
-                <a href="https://github.com/kipasgts">Balik?</a>
+        .portfolio-box.dark {
+            background-color: #37474f;
+            border: 2px solid #80cbc4;
+            color: #eceff1;
+        }
+
+        .portfolio-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .text-section {
+            margin-bottom: 20px;
+        }
+
+        .text-section h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #00796b;
+        }
+
+        .text-section p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        .image-section {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            border-radius: 50%;
+            border: 3px solid #00796b;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .image-section img.rotate {
+            animation: rotateImage 2s linear infinite;
+        }
+
+        @keyframes rotateImage {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .theme-toggle {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .theme-toggle input {
+            display: none;
+        }
+
+        .slider {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background-color: #00796b;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .slider::before {
+            content: "";
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s;
+        }
+
+        input:checked + .slider {
+            background-color: #80cbc4;
+        }
+
+        input:checked + .slider::before {
+            transform: translateX(30px);
+        }
+
+        @media (max-width: 600px) {
+            .text-section h1 {
+                font-size: 2em;
+            }
+
+            .text-section p {
+                font-size: 1em;
+            }
+
+            .portfolio-box {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="portfolio-box">
+            <div class="text-section">
+                <h1>KIPASGTS</h1>
+                <p>KIPASGTS adalah seorang modder game Stumble Guys yang dikenal juga dengan nama Haikal atau Ekal. Ia menciptakan berbagai modifikasi yang membuat permainan menjadi lebih menarik dan seru.</p>
+            </div>
+            <div class="image-section">
+                <img id="mainImage" src="https://yt3.googleusercontent.com/dpi__e_FSUQECtHFEGADKSeOO_5sjvGnVzYfhtORYlLO4XtHj0whu6OdO1X2lgmIePqDxD9mkQA=s160-c-k-c0x00ffffff-no-rj" alt="KIPASGTS Haikal Ekal" onclick="toggleAudio()">
+                <audio id="backgroundMusic" src="https://cdn.discordapp.com/attachments/1227657511935410176/1252914247260962906/Mighfar_Suganda_-_Gemuruh_Riuh.mp3?ex=6673f2d2&is=6672a152&hm=27ede21fbf8c9d4c3de88ce530810db2f7e42b2a49cb5cc09c9eeeca5f5c728a&"></audio>
+            </div>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" onclick="toggleTheme()">
+                <label for="theme-switch" class="slider"></label>
             </div>
         </div>
-    </body>
+    </div>
+    <script>
+        let isPlaying = false;
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            document.querySelectorAll('.portfolio-box').forEach(box => {
+                box.classList.toggle('dark');
+            });
+        }
+
+        function toggleAudio() {
+            const audio = document.getElementById('backgroundMusic');
+            const image = document.getElementById('mainImage');
+
+            if (isPlaying) {
+                audio.pause();
+                image.classList.remove('rotate');
+            } else {
+                audio.play();
+                image.classList.add('rotate');
+            }
+            isPlaying = !isPlaying;
+        }
+
+        document.getElementById('backgroundMusic').addEventListener('ended', () => {
+            document.getElementById('mainImage').classList.remove('rotate');
+            isPlaying = false;
+        });
+    </script>
+</body>
 </html>
