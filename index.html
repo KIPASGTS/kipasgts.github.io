@@ -88,6 +88,9 @@
         .image-section {
             margin-top: 20px;
             position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         .image-section img {
@@ -100,6 +103,11 @@
 
         .image-section img.rotate {
             animation: rotateImage 2s linear infinite;
+        }
+
+        .image-section .small-image {
+            width: 100px;
+            height: 100px;
         }
 
         @keyframes rotateImage {
@@ -175,6 +183,16 @@
             .portfolio-box {
                 padding: 15px;
             }
+
+            .image-section {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .image-section .small-image {
+                width: 70px;
+                height: 70px;
+            }
         }
     </style>
 </head>
@@ -186,8 +204,10 @@
                 <p>KIPASGTS adalah seorang modder game Stumble Guys yang dikenal juga dengan nama Haikal atau Ekal. Ia menciptakan berbagai modifikasi yang membuat permainan menjadi lebih menarik dan seru.</p>
             </div>
             <div class="image-section">
-                <img id="mainImage" src="https://yt3.googleusercontent.com/dpi__e_FSUQECtHFEGADKSeOO_5sjvGnVzYfhtORYlLO4XtHj0whu6OdO1X2lgmIePqDxD9mkQA=s160-c-k-c0x00ffffff-no-rj" alt="KIPASGTS Haikal Ekal" onclick="toggleAudio()">
-                <audio id="backgroundMusic" src="assets/music/gemuruhriuh.mp3"></audio>
+                <img id="mainImage" src="https://yt3.googleusercontent.com/dpi__e_FSUQECtHFEGADKSeOO_5sjvGnVzYfhtORYlLO4XtHj0whu6OdO1X2lgmIePqDxD9mkQA=s160-c-k-c0x00ffffff-no-rj" alt="KIPASGTS Haikal Ekal" onclick="toggleAudio('main')">
+                <img id="secondImage" class="small-image" src="https://kipasgts.github.io/assets/img/harleyda.jpg" alt="Harley Da" onclick="toggleAudio('second')">
+                <audio id="mainAudio" src="https://github.com/KIPASGTS/kipasgts.github.io/raw/main/assets/music/gemuruhriuh.mp3"></audio>
+                <audio id="secondAudio" src="https://example.com/second-audio.mp3"></audio>
             </div>
             <div class="theme-toggle">
                 <input type="checkbox" id="theme-switch" onclick="toggleTheme()">
@@ -197,6 +217,7 @@
     </div>
     <script>
         let isPlaying = false;
+        let currentAudio = null;
 
         function toggleTheme() {
             document.body.classList.toggle('dark-theme');
@@ -205,24 +226,48 @@
             });
         }
 
-        function toggleAudio() {
-            const audio = document.getElementById('backgroundMusic');
-            const image = document.getElementById('mainImage');
+        function toggleAudio(image) {
+            const mainAudio = document.getElementById('mainAudio');
+            const secondAudio = document.getElementById('secondAudio');
+            const mainImage = document.getElementById('mainImage');
+            const secondImage = document.getElementById('secondImage');
 
-            if (isPlaying) {
-                audio.pause();
-                image.classList.remove('rotate');
+            if (image === 'main') {
+                if (currentAudio === mainAudio && !mainAudio.paused) {
+                    mainAudio.pause();
+                    mainImage.classList.remove('rotate');
+                    currentAudio = null;
+                    isPlaying = false;
+                    return;
+                }
+                currentAudio = mainAudio;
+                mainImage.classList.add('rotate');
+                secondImage.classList.remove('rotate');
+                secondAudio.pause();
             } else {
-                audio.play();
-                image.classList.add('rotate');
+                if (currentAudio === secondAudio && !secondAudio.paused) {
+                    secondAudio.pause();
+                    secondImage.classList.remove('rotate');
+                    currentAudio = null;
+                    isPlaying = false;
+                    return;
+                }
+                currentAudio = secondAudio;
+                secondImage.classList.add('rotate');
+                mainImage.classList.remove('rotate');
+                mainAudio.pause();
             }
-            isPlaying = !isPlaying;
-        }
 
-        document.getElementById('backgroundMusic').addEventListener('ended', () => {
-            document.getElementById('mainImage').classList.remove('rotate');
-            isPlaying = false;
-        }); //akbar kontol
+            currentAudio.play();
+            isPlaying = true;
+
+            currentAudio.addEventListener('ended', () => {
+                mainImage.classList.remove('rotate');
+                secondImage.classList.remove('rotate');
+                isPlaying = false;
+                currentAudio = null;
+            });
+        }
     </script>
 </body>
 </html>
