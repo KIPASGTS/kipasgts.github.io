@@ -1,12 +1,12 @@
-<html>
- <head>
-  <title>
-   SI KIPAS | Profile
-  </title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI KIPAS | Profile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
             margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
@@ -15,20 +15,24 @@
             height: 100vh;
             background: linear-gradient(135deg, #d4e0f5, #b3c7e6);
         }
+
         .container {
             text-align: center;
         }
+
         .profile-pic {
             width: 100px;
             height: 100px;
             border-radius: 50%;
             margin-bottom: 10px;
         }
+
         .username {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 20px;
         }
+
         .card {
             display: flex;
             align-items: center;
@@ -39,40 +43,54 @@
             padding: 10px 20px;
             margin: 10px 0;
             width: 300px;
+            transition: transform 0.3s ease;
         }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
         .card img {
             width: 40px;
             height: 40px;
             border-radius: 5px;
         }
+
         .card-text {
             flex-grow: 1;
             text-align: left;
             margin-left: 10px;
         }
+
         .card i {
             color: #888;
         }
-  </style>
- </head>
- <body>
-  <div class="container">
-   <img alt="Profile picture" class="profile-pic" height="100" src="https://storage.googleapis.com/a1aa/image/lJimfPdGt80JASlCXeFpkaPMybXM989iT5uwyu0Ck6UHsVCUA.jpg" width="100"/>
-   <div class="username">
-    SI KIPAS
-   </div>
-   <div class="card" href="https://saweria.co/KIPASGTS">
-    <img alt="SUPPORT GW DI SAWERIA" height="40" src="https://storage.googleapis.com/a1aa/image/oPZOdv5XXmKhI1LA6PqDI6Gfdv6wI8nekQCzJOBauKGGsVCUA.jpg" width="40"/>
-    <div class="card-text">
-     SUPPORT GW DI SAWERIA
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img 
+            src="https://storage.googleapis.com/a1aa/image/lJimfPdGt80JASlCXeFpkaPMybXM989iT5uwyu0Ck6UHsVCUA.jpg" 
+            alt="Profile picture" 
+            class="profile-pic"
+        >
+        <div class="username">SI KIPAS</div>
+
+        <a href="https://saweria.co/KIPASGTS" class="card">
+            <img 
+                src="https://storage.googleapis.com/a1aa/image/oPZOdv5XXmKhI1LA6PqDI6Gfdv6wI8nekQCzJOBauKGGsVCUA.jpg" 
+                alt="SUPPORT GW DI SAWERIA"
+            >
+            <div class="card-text">SUPPORT GW DI SAWERIA</div>
+        </a>
+
+        <a href="https://discord.gg/kipasgts" class="card">
+            <img 
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAz1BMVEX///9KYfz8/Pz//v/s7OxKYfv///35+fnz8/Pf39/l5eVKYP7d3Nnq8P/0+P89WujGzO4/WOkuTOrT2PP///ro6OhGXv9KY/r6//8+WPja2tpAVt7I0vM5Uuzv8/w8VeppeeKIleQ7Vfe5wuyAj+FOYul3h+GPoOm7xe6os+yPmeNte93b4fc+WfTu8u9PYuNxhOxRZ994iOCjruXi6v+uuel+je1gcecsSOygrPAxTN9RZN1ldOOXpuRred7Z4PlXauwxSd/Ax/XY3OaxuO2ydlshAAANsUlEQVR4nO1di3bauhKVcaU0VTA4OH4EbAeCE0JwaRIIzYOmt+3/f9PVSIaAkU1zrh+cu7TXSVcOEbK2ZjSSZkYyQgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgv/p7GBnW7S+" 
+                alt="Join Discord SIKIPAS"
+            >
+            <div class="card-text">Join Discord SIKIPAS</div>
+        </a>
     </div>
-   </div>
-   <div class="card">
-    <img alt="Socialbuzz logo" height="40" src="data:image/png;base64,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" width="40"/>
-    <div class="card-text">
-     Join Discord SIKIPAS
-    </div>
-   </div>
-  </div>
- </body>
+</body>
 </html>
