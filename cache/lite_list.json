@@ -1723,20 +1723,6 @@
       "gpu": "all"
     },
     {
-      "name": "Alyn_SAMPMOBILE.log",
-      "size": 14284103,
-      "path": "logcat/Alyn_SAMPMOBILE.log",
-      "url": "http://206.189.89.8:8888/cache/data_lite/logcat/Alyn_SAMPMOBILE.log",
-      "gpu": "all"
-    },
-    {
-      "name": "client.log",
-      "size": 115258,
-      "path": "logcat/client.log",
-      "url": "http://206.189.89.8:8888/cache/data_lite/logcat/client.log",
-      "gpu": "all"
-    },
-    {
       "name": "effects.fxp",
       "size": 616708,
       "path": "models/effects.fxp",
