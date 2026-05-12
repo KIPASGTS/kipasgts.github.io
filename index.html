@@ -3,101 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SI KIPAS | Profile</title>
-    <link rel="icon" href="logo_sikipas.jpeg" type="image/x-icon" />
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>SIKIPAS | Security Enthusiast & Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['"Fira Code"', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            cyan: '#36BCF7',
+                            dark: '#0f172a',
+                            card: '#1e293b',
+                            accent: '#38bdf8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #d4e0f5, #b3c7e6);
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .username {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 10px 0;
-            width: 300px;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card img {
-            width: 40px;
-            height: 40px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .card-text {
-            text-align: center;
-            font-size: 16px;
-            font-weight: 500;
-        }
+        body { background-color: #0f172a; color: #cbd5e1; }
+        .glow-text { text-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.2); border-color: #38bdf8; }
     </style>
 </head>
-<body>
-    <div class="container">
-        <img 
-            src="logo_sikipas.jpeg" 
-            alt="Profile picture" 
-            class="profile-pic"
-        >
-        <div class="username">SI KIPAS</div>
+<body class="font-mono antialiased min-h-screen flex flex-col">
 
-        <a href="https://saweria.co/KIPASGTS" class="card">
-            <img 
-                src="logo_saweria.png"
-                alt="SUPPORT GW DI SAWERIA"
-            >
-            <div class="card-text">Support GW Di Saweria</div>
-        </a>
+    <!-- Header / Nav -->
+    <nav class="w-full p-6 border-b border-slate-800 bg-brand-dark bg-opacity-90 sticky top-0 z-50 backdrop-blur-sm">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-white glow-text">root@sikipas:~#</div>
+            <div class="space-x-4 text-xl">
+                <a href="https://www.youtube.com/@kipasgts" target="_blank" class="text-red-500 hover:text-red-400 transition"><i class="fab fa-youtube"></i></a>
+                <a href="https://dsc.gg/sikipas" target="_blank" class="text-indigo-500 hover:text-indigo-400 transition"><i class="fab fa-discord"></i></a>
+                <a href="https://github.com/kipasgts" target="_blank" class="text-white hover:text-gray-300 transition"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </nav>
 
-        <a href="https://chat.whatsapp.com/GXnkMs0ARIP9z6mpS6WnnX" class="card">
-            <img 
-                src="logo_sikipas.jpeg"
-                alt="Join Group Whatsapp SIKIPAS"
-            >
-            <div class="card-text">Join Group Whatsapp SIKIPAS</div>
-        </a>
-        <a href="https://dsc.gg/sikipas" class="card">
-            <img 
-                src="logo_discord.png"
-                alt="Discord SIKIPAS"
-            >
-            <div class="card-text">Discord SIKIPAS</div>
-        </a>
-    </div>
+    <!-- Main Content -->
+    <main class="flex-grow max-w-5xl mx-auto w-full p-6 mt-8 space-y-16">
+        
+        <!-- Hero Section -->
+        <section class="space-y-6">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-2">Hi there, I'm <span class="text-brand-accent glow-text">SIKIPAS</span></h1>
+            <h3 class="text-xl md:text-2xl text-slate-400 border-l-4 border-brand-accent pl-4">Software Developer | Reverse Engineer | Security Enthusiast</h3>
+            
+            <p class="text-lg leading-relaxed mt-6 max-w-3xl">
+                I am a 25-year-old developer with a deep passion for exploring how things work under the hood. My journey involves everything from reverse engineering and building custom game server architectures to developing full-stack web applications and security testing tools.
+            </p>
+            <p class="text-lg leading-relaxed max-w-3xl">
+                Beyond development, <strong class="text-white">I have a massive obsession with application and web security.</strong> I love the thrill of discovering vulnerabilities—and I'll admit, I have a bit of a mischievous streak! When I successfully breach a system or find a critical flaw, I enjoy pulling off clever pranks to prove a point. Much of my free time is spent hunting for loopholes and crafting custom exploits to push the absolute limits of game servers.
+            </p>
+            <p class="text-lg leading-relaxed max-w-3xl">
+                To keep up with complex challenges, I strongly leverage <strong class="text-brand-cyan">AI-Assisted Development</strong> and <strong class="text-brand-cyan">Prompt Engineering</strong> in my daily workflow to accelerate coding and debugging.
+            </p>
+        </section>
+
+        <!-- Tech Stack & Tools -->
+        <section class="grid md:grid-cols-2 gap-8">
+            <div class="bg-brand-card p-6 rounded-lg border border-slate-700">
+                <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-600 pb-2"><i class="fas fa-code text-brand-accent mr-2"></i>Tech Stack</h2>
+                <ul class="space-y-2">
+                    <li><span class="text-brand-accent font-bold">Languages:</span> C++, Python 3, Node.js, PHP</li>
+                    <li><span class="text-brand-accent font-bold">Databases:</span> MySQL</li>
+                    <li><span class="text-brand-accent font-bold">Specialties:</span> Reverse Engineering, Memory Hooking, Protocol Analysis, Exploit Dev</li>
+                </ul>
+            </div>
+            
+            <div class="bg-brand-card p-6 rounded-lg border border-slate-700">
+                <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-600 pb-2"><i class="fas fa-toolbox text-brand-accent mr-2"></i>Tools & Software</h2>
+                <ul class="space-y-2">
+                    <li><span class="text-brand-accent font-bold">Dev & Ops:</span> VS Code, Termius</li>
+                    <li><span class="text-brand-accent font-bold">Reverse Engineering:</span> IDA Pro, HxD Editor</li>
+                    <li><span class="text-brand-accent font-bold">Net & Security:</span> Burp Suite, Proxyman, ProxyPin, mitmproxy</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2 class="text-3xl font-bold text-white mb-8"><i class="fas fa-rocket text-brand-accent mr-3"></i>Highlighted Projects</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <!-- FFKIPAS -->
+                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4">
+                    <img src="https://www.ffkipas.my.id/assets/images/favicon/favicon.ico" class="w-12 h-12 rounded bg-white p-1" alt="FFKIPAS">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">FFKIPAS</h3>
+                        <p class="text-sm text-slate-400 mb-2">Free Fire Private Server</p>
+                        <p class="text-sm">Developed a custom server architecture handling game logic, protocol decoding, and server-side management.</p>
+                    </div>
+                </div>
+
+                <!-- KIPASGUYS -->
+                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4">
+                    <img src="https://kipasguys.club/wp-content/uploads/2024/10/kipas-guys.png" class="w-12 h-12 rounded bg-slate-800 p-1" alt="KIPASGUYS">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">KIPASGUYS</h3>
+                        <p class="text-sm text-slate-400 mb-2">Stumble Guys PS + Mod Menu</p>
+                        <p class="text-sm">A custom multiplayer private server integrated with an internal mod menu, built by reverse engineering game logic.</p>
+                    </div>
+                </div>
+
+                <!-- GTPS -->
+                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4">
+                    <img src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" class="w-12 h-12 rounded bg-white p-1" alt="GTPS">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">GTPS</h3>
+                        <p class="text-sm text-slate-400 mb-2">Growtopia Private Server</p>
+                        <p class="text-sm">Engineered custom backend systems to support complex game mechanics, item economies, and real-time networking.</p>
+                    </div>
+                </div>
+
+                <!-- Automated Pentester Tool -->
+                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded bg-slate-800 text-2xl">🛡️</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Automated Pentester Tool</h3>
+                        <p class="text-sm text-slate-400 mb-2">Vulnerability Scanner</p>
+                        <p class="text-sm">Engineered a mass vulnerability scanning and automated injection tool designed to test web application security.</p>
+                    </div>
+                </div>
+
+                <!-- Mod Menus & Exploits -->
+                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 md:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 flex items-center justify-center rounded bg-slate-800 text-2xl">💉</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">In-Game Mod Menus & Exploits</h3>
+                        <p class="text-sm text-slate-400 mb-2">C++ Hooks & Network Exploits</p>
+                        <p class="text-sm">Developed internal C++ injected mod menus and crafted custom network exploits for various games.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center p-6 border-t border-slate-800 mt-12 text-slate-500 text-sm">
+        <p>&copy; 2026 SIKIPAS. Built with caffeine, curiosity, and AI.</p>
+    </footer>
+
 </body>
 </html>
