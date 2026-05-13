@@ -27,20 +27,45 @@
         }
     </script>
     <style>
-        body { background-color: #0f172a; color: #cbd5e1; }
+        body { background-color: #0f172a; color: #cbd5e1; overflow-x: hidden; }
         .glow-text { text-shadow: 0 0 8px rgba(56, 189, 248, 0.6); }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.2); border-color: #38bdf8; }
-        /* Animasi kursor berkedip */
+        
+        /* Animasi kursor berkedip terminal */
         .cursor-blink { animation: blink 1s step-end infinite; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* Loader Pre-screen CSS */
+        #loader { transition: opacity 0.6s ease-out, visibility 0.6s ease-out; }
+        .loader-hidden { opacity: 0; visibility: hidden; }
+
+        /* CSS Animasi Scroll (Masuk & Keluar) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Penyesuaian delay berantai agar munculnya gantian */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
     </style>
 </head>
 <body class="font-mono antialiased min-h-screen flex flex-col">
 
+    <!-- Preloader / Loading Screen -->
+    <div id="loader" class="fixed inset-0 bg-brand-dark z-[9999] flex flex-col items-center justify-center">
+        <i class="fas fa-circle-notch fa-spin text-5xl text-brand-cyan mb-4 glow-text"></i>
+        <p class="text-brand-accent animate-pulse font-bold tracking-widest">[ INITIALIZING SECURE PAYLOAD... ]</p>
+    </div>
+
     <!-- Header / Nav -->
-    <nav class="w-full px-6 py-4 border-b border-slate-800 bg-brand-dark bg-opacity-95 sticky top-0 z-50 backdrop-blur-md">
+    <nav class="w-full px-6 py-4 border-b border-slate-800 bg-brand-dark bg-opacity-95 sticky top-0 z-50 backdrop-blur-md transition-all duration-500 reveal active">
         <div class="max-w-5xl mx-auto flex justify-between items-start md:items-center">
-            <!-- Terminal Text Area with fixed height so it doesn't bounce the layout -->
+            <!-- Terminal Text Area with fixed height -->
             <div class="h-20 flex flex-col justify-center">
                 <div id="terminal-text" class="text-sm md:text-lg font-bold text-white glow-text leading-tight"></div>
             </div>
@@ -54,10 +79,10 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-grow max-w-5xl mx-auto w-full p-6 mt-4 space-y-16">
+    <main class="flex-grow max-w-5xl mx-auto w-full p-6 mt-4 space-y-20">
         
         <!-- Hero Section -->
-        <section class="space-y-6">
+        <section class="space-y-6 reveal">
             <h1 class="text-5xl md:text-6xl font-bold text-white mb-2">Hi there, I'm <span class="text-brand-accent glow-text">SIKIPAS</span></h1>
             <h3 class="text-xl md:text-2xl text-slate-400 border-l-4 border-brand-accent pl-4">Software Developer | Reverse Engineer | Security Enthusiast</h3>
             
@@ -74,7 +99,7 @@
 
         <!-- Tech Stack & Tools -->
         <section class="grid md:grid-cols-2 gap-8">
-            <div class="bg-brand-card p-6 rounded-lg border border-slate-700">
+            <div class="bg-brand-card p-6 rounded-lg border border-slate-700 reveal">
                 <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-600 pb-2"><i class="fas fa-code text-brand-accent mr-2"></i>Tech Stack</h2>
                 <ul class="space-y-2">
                     <li><span class="text-brand-accent font-bold">Languages:</span> C++, Python 3, Node.js, PHP</li>
@@ -83,7 +108,7 @@
                 </ul>
             </div>
             
-            <div class="bg-brand-card p-6 rounded-lg border border-slate-700">
+            <div class="bg-brand-card p-6 rounded-lg border border-slate-700 reveal delay-100">
                 <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-600 pb-2"><i class="fas fa-toolbox text-brand-accent mr-2"></i>Tools & Software</h2>
                 <ul class="space-y-2">
                     <li><span class="text-brand-accent font-bold">Dev & Ops:</span> VS Code, Termius</li>
@@ -95,11 +120,11 @@
 
         <!-- Projects -->
         <section>
-            <h2 class="text-3xl font-bold text-white mb-8"><i class="fas fa-rocket text-brand-accent mr-3"></i>Highlighted Projects</h2>
+            <h2 class="text-3xl font-bold text-white mb-8 reveal"><i class="fas fa-rocket text-brand-accent mr-3"></i>Highlighted Projects</h2>
             <div class="grid md:grid-cols-2 gap-6">
                 
                 <!-- FFKIPAS -->
-                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4">
+                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 reveal">
                     <img src="https://www.ffkipas.my.id/assets/images/favicon/favicon.svg?v=1.0" class="w-12 h-12 rounded bg-white p-1" alt="FFKIPAS">
                     <div>
                         <h3 class="text-xl font-bold text-white mb-2">FFKIPAS</h3>
@@ -108,9 +133,9 @@
                     </div>
                 </div>
 
-                <!-- KIPASGUYS -->
-                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4">
-                    <img src="https://www.ffkipas.my.id/assets/images/favicon/favicon.svg?v=1.0" class="w-12 h-12 rounded bg-white p-1" alt="KIPASGUYS">
+                <!-- KIPASGUYS (Reverted to original image) -->
+                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 reveal delay-100">
+                    <img src="https://kipasguys.club/wp-content/uploads/2024/10/kipas-guys.png" class="w-12 h-12 rounded bg-slate-800 p-1" alt="KIPASGUYS">
                     <div>
                         <h3 class="text-xl font-bold text-white mb-2">KIPASGUYS</h3>
                         <p class="text-sm text-slate-400 mb-2">Stumble Guys PS + Mod Menu</p>
@@ -119,7 +144,7 @@
                 </div>
 
                 <!-- GTPS -->
-                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4">
+                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 reveal">
                     <img src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" class="w-12 h-12 rounded bg-white p-1" alt="GTPS">
                     <div>
                         <h3 class="text-xl font-bold text-white mb-2">GTPS</h3>
@@ -129,7 +154,7 @@
                 </div>
 
                 <!-- Automated Pentester Tool -->
-                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4">
+                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 reveal delay-100">
                     <div class="w-12 h-12 flex items-center justify-center rounded bg-slate-800">
                         <i class="fas fa-shield-virus text-3xl text-red-500 drop-shadow-md"></i>
                     </div>
@@ -141,7 +166,7 @@
                 </div>
 
                 <!-- Mod Menus & Exploits -->
-                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 md:col-span-2 lg:col-span-1">
+                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 md:col-span-2 lg:col-span-1 reveal">
                     <div class="w-12 h-12 flex items-center justify-center rounded bg-slate-800">
                         <i class="fas fa-syringe text-3xl text-purple-500 drop-shadow-md"></i>
                     </div>
@@ -158,12 +183,46 @@
     </main>
 
     <!-- Footer -->
-    <footer class="w-full text-center p-6 border-t border-slate-800 mt-12 text-slate-500 text-sm">
+    <footer class="w-full text-center p-6 border-t border-slate-800 mt-12 text-slate-500 text-sm reveal">
         <p>&copy; 2026 SIKIPAS. Built with caffeine, curiosity, and AI.</p>
     </footer>
 
-    <!-- Script Animasi Mengetik -->
+    <!-- Scripts (Loader, Scroll Reveal, Terminal Animation) -->
     <script>
+        // 1. Page Load Animation / Preloader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            // Sedikit delay (0.8 detik) agar aura terminal-nya terasa
+            setTimeout(() => {
+                loader.classList.add('loader-hidden');
+            }, 800);
+        });
+
+        // 2. Scroll Animation (Masuk & Keluar) memakai Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.15 // Animasi terpicu saat 15% elemen terlihat di layar
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Muncul (Fade In Up)
+                    entry.target.classList.add('active');
+                } else {
+                    // Hilang (Fade Out Down) saat keluar dari viewport
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, observerOptions);
+
+        // Pasang observer ke semua elemen dengan class 'reveal'
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // 3. Script Animasi Mengetik (Header)
         const terminal = document.getElementById('terminal-text');
         const cursor = '<span class="cursor-blink text-brand-accent">_</span>';
         const prompt = '<span class="text-brand-cyan">root@sikipas</span><span class="text-white">:</span><span class="text-blue-400">~</span><span class="text-white"># </span>';
@@ -172,36 +231,28 @@
 
         async function runTerminalAnimation() {
             while (true) {
-                // 1. Tampilkan prompt awal
                 terminal.innerHTML = prompt + cursor;
                 await sleep(1500);
 
-                // 2. Ketik "whoami"
                 let cmd1 = "whoami";
                 for (let i = 1; i <= cmd1.length; i++) {
                     terminal.innerHTML = prompt + cmd1.substring(0, i) + cursor;
-                    await sleep(150); // Kecepatan ngetik
+                    await sleep(150);
                 }
                 await sleep(500);
 
-                // 3. Tampilkan hasil "hacker" dan prompt baru
                 let output = "<br><span class='text-slate-300 font-normal'>hacker</span><br>" + prompt;
                 terminal.innerHTML = prompt + cmd1 + output + cursor;
                 await sleep(2000);
 
-                // 4. Ketik "clear"
                 let cmd2 = "clear";
                 for (let i = 1; i <= cmd2.length; i++) {
                     terminal.innerHTML = prompt + cmd1 + output + cmd2.substring(0, i) + cursor;
                     await sleep(150);
                 }
                 await sleep(800);
-                
-                // 5. Layar bersih, animasi mengulang dari awal
             }
         }
-
-        // Jalankan fungsi
         runTerminalAnimation();
     </script>
 
