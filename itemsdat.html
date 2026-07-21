@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>items.dat Viewer / Modifier</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #0f1115;
+    --panel: #171a21;
+    --border: #2a2f3a;
+    --text: #e6e8eb;
+    --muted: #8b93a3;
+    --accent: #4f8cff;
+    --ok: #3ecf6a;
+    --bad: #ff5d5d;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f5f6f8;
+      --panel: #ffffff;
+      --border: #dfe2e8;
+      --text: #1b1e24;
+      --muted: #5b6472;
+      --accent: #2f6fed;
+      --ok: #1a9e4c;
+      --bad: #d43a3a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  header h1 { font-size: 16px; margin: 0; white-space: nowrap; }
+  .status {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .badge {
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+  }
+  .badge.ok { color: var(--ok); border-color: var(--ok); }
+  .badge.bad { color: var(--bad); border-color: var(--bad); }
+  main {
+    display: grid;
+    grid-template-columns: minmax(280px, 1.2fr) minmax(260px, 1fr);
+    gap: 16px;
+    padding: 16px 20px;
+    height: calc(100vh - 66px);
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .panel-head {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .panel-head input[type=text] {
+    flex: 1;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 8px;
+    color: var(--text);
+    font-size: 13px;
+  }
+  .list { overflow-y: auto; flex: 1; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { position: sticky; top: 0; background: var(--panel); color: var(--muted); font-weight: 600; }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover { background: rgba(127,127,127,0.08); }
+  tbody tr.selected { background: rgba(79,140,255,0.15); }
+  .hint { padding: 20px; color: var(--muted); font-size: 13px; }
+  .editor { overflow-y: auto; flex: 1; padding: 12px; }
+  .editor h2 { font-size: 14px; margin: 0 0 10px; }
+  .field { margin-bottom: 10px; }
+  .field label { display: block; font-size: 11px; color: var(--muted); margin-bottom: 3px; }
+  .field input[type=text], .field input[type=number] {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 8px;
+    color: var(--text);
+    font-size: 13px;
+    font-family: inherit;
+  }
+  .field .hex {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    color: var(--muted);
+    word-break: break-all;
+  }
+  .flags-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 12px;
+    font-size: 12.5px;
+  }
+  .flags-grid label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+  fieldset { border: 1px solid var(--border); border-radius: 8px; margin: 0 0 14px; padding: 10px; }
+  legend { font-size: 12px; color: var(--muted); padding: 0 6px; }
+  button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 14px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  button.secondary { background: transparent; border: 1px solid var(--border); color: var(--text); }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  .editor-actions { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--border); }
+  input[type=file] { color: var(--text); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>items.dat Viewer / Modifier</h1>
+  <input type="file" id="fileInput" accept=".dat">
+  <div class="status" id="status"></div>
+  <div style="flex:1"></div>
+  <button id="downloadBtn" disabled>Download modified items.dat</button>
+</header>
+
+<main>
+  <div class="panel">
+    <div class="panel-head">
+      <input type="text" id="search" placeholder="Search by id or name..." disabled>
+    </div>
+    <div class="list">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Type</th><th>Rarity</th><th>Texture</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="hint" id="listHint">Load an items.dat file to begin.</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="editor" id="editor">
+      <div class="hint">Select an item on the left to view/edit its fields.</div>
+    </div>
+    <div class="editor-actions" id="editorActions" style="display:none">
+      <button id="applyBtn">Apply changes to item</button>
+      <button class="secondary" id="revertBtn">Revert</button>
+    </div>
+  </div>
+</main>
+
+<script>
+'use strict';
+
+// XOR key used to obfuscate item names — same "PBG892FXX982ABC" constant
+// found in the decompiled client (see read.txt / index.js in this project).
+const XOR_KEY = 'PBG892FXX982ABC*';
+
+// Confirmed bit order for the `flags` field (16 bits, validated against
+// ItemInfo::IsEditable() in an older client build, which reads bit 1).
+const FLAG_NAMES = [
+  'FLIPPABLE', 'EDITABLE', 'SEEDLESS', 'PERMANENT', 'AUTOPICKUP', 'DROPLESS',
+  'NO_SELF', 'NO_SHADOW', 'WORLDLOCKED', 'FOREGROUND', 'RANDOM_GROW', 'PUBLIC',
+  'HOLIDAY', 'UNTRADEABLE', 'BETA', 'MOD',
+];
+
+class BinReader {
+  constructor(buffer) {
+    this.dv = new DataView(buffer);
+    this.pos = 0;
+  }
+  u8() { const v = this.dv.getUint8(this.pos); this.pos += 1; return v; }
+  i8() { const v = this.dv.getInt8(this.pos); this.pos += 1; return v; }
+  u16() { const v = this.dv.getUint16(this.pos, true); this.pos += 2; return v; }
+  i16() { const v = this.dv.getInt16(this.pos, true); this.pos += 2; return v; }
+  u32() { const v = this.dv.getUint32(this.pos, true); this.pos += 4; return v; }
+  i32() { const v = this.dv.getInt32(this.pos, true); this.pos += 4; return v; }
+  bytes(n) {
+    const v = new Uint8Array(this.dv.buffer, this.dv.byteOffset + this.pos, n).slice();
+    this.pos += n;
+    return v;
+  }
+  string(encoded, id) {
+    const len = this.u16();
+    const raw = this.bytes(len);
+    let out = '';
+    if (!encoded) {
+      for (let i = 0; i < len; i++) out += String.fromCharCode(raw[i]);
+    } else {
+      for (let i = 0; i < len; i++) {
+        out += String.fromCharCode(raw[i] ^ XOR_KEY.charCodeAt((id + i) % XOR_KEY.length));
+      }
+    }
+    return out;
+  }
+}
+
+class BinWriter {
+  constructor(initialSize) {
+    this.buf = new Uint8Array(initialSize);
+    this.dv = new DataView(this.buf.buffer);
+    this.pos = 0;
+  }
+  ensure(n) {
+    if (this.pos + n > this.buf.length) {
+      const grown = new Uint8Array(Math.max(this.buf.length * 2, this.pos + n));
+      grown.set(this.buf);
+      this.buf = grown;
+      this.dv = new DataView(this.buf.buffer);
+    }
+  }
+  u8(v) { this.ensure(1); this.dv.setUint8(this.pos, v & 0xff); this.pos += 1; }
+  i8(v) { this.ensure(1); this.dv.setInt8(this.pos, v); this.pos += 1; }
+  u16(v) { this.ensure(2); this.dv.setUint16(this.pos, v & 0xffff, true); this.pos += 2; }
+  i16(v) { this.ensure(2); this.dv.setInt16(this.pos, v, true); this.pos += 2; }
+  u32(v) { this.ensure(4); this.dv.setUint32(this.pos, v >>> 0, true); this.pos += 4; }
+  i32(v) { this.ensure(4); this.dv.setInt32(this.pos, v, true); this.pos += 4; }
+  bytes(arr) {
+    this.ensure(arr.length);
+    this.buf.set(arr, this.pos);
+    this.pos += arr.length;
+  }
+  string(str, encoded, id) {
+    str = str || '';
+    const len = str.length;
+    this.u16(len);
+    this.ensure(len);
+    for (let i = 0; i < len; i++) {
+      let c = str.charCodeAt(i) & 0xff;
+      if (encoded) c ^= XOR_KEY.charCodeAt((id + i) % XOR_KEY.length);
+      this.buf[this.pos + i] = c;
+    }
+    this.pos += len;
+  }
+  finish() { return this.buf.slice(0, this.pos); }
+}
+
+// Field layout ported 1:1 from index.js's ItemInfoManager (Node/Buffer) to
+// browser DataView. Keep in sync with that file if the format is revised.
+function loadItemsDat(arrayBuffer) {
+  const r = new BinReader(arrayBuffer);
+  const version = r.u16();
+  const itemCount = r.i32();
+  const items = new Array(itemCount);
+
+  for (let n = 0; n < itemCount; n++) {
+    const item = {};
+
+    item.id = r.i32();
+    item.flags = r.u16();
+    item.type = r.u8();
+    item.materialType = r.u8();
+
+    item.name = r.string(true, item.id);
+    item.texture = r.string(false, item.id);
+
+    item.textureHash = r.i32();
+    item.visualEffectType = r.u8();
+    item.cookingTime = r.i32();
+
+    item.textureX = r.u8();
+    item.textureY = r.u8();
+    item.storageType = r.u8();
+    item.isStripeyWallpaper = r.u8();
+    item.collisionType = r.u8();
+    item.breakHits = r.u8() / 6;
+
+    item.resetStateAfter = r.i32();
+    item.bodyPartType = r.u8();
+    item.rarity = r.i16();
+    item.maxAmount = r.u8();
+
+    item.extraFile = r.string(false, item.id);
+    item.extraFileHash = r.i32();
+    item.audioVolume = r.i32();
+
+    item.petName = r.string(false, item.id);
+    item.petPrefix = r.string(false, item.id);
+    item.petSuffix = r.string(false, item.id);
+    item.petAbility = r.string(false, item.id);
+
+    item.seedBase = r.u8();
+    item.seedOverlay = r.u8();
+    item.treeBase = r.u8();
+    item.treeLeaves = r.u8();
+
+    item.seedColor = r.i32();
+    item.seedOverlayColor = r.i32();
+    item.ingredient = r.i32();
+    item.growTime = r.i32();
+
+    item.fxFlags = r.i32();
+
+    item.extraOptions = r.string(false, item.id);
+    item.texture2 = r.string(false, item.id);
+    item.extraOptions2 = r.string(false, item.id);
+
+    item.unknownInt1 = r.i32();
+    item.unknownInt2 = r.i32();
+    item.flags2 = r.i32();
+
+    item.extraBytes = r.bytes(60);
+
+    item.tileRange = r.i32();
+    item.vaultCapacity = r.i32();
+
+    if (version >= 11) {
+      item.punchOptions = r.string(false, item.id);
+
+      if (version >= 12) {
+        item.flags3 = r.i32();
+        item.bodyPart = r.bytes(9);
+      }
+      if (version >= 13) item.lightRange = r.i32();
+      if (version >= 14) item.unknownInt3 = r.i32();
+      if (version >= 15) {
+        item.canSit = r.u8();
+        item.playerOffsetX = r.i32();
+        item.playerOffsetY = r.i32();
+        item.chairTextureX = r.i32();
+        item.chairTextureY = r.i32();
+        item.chairLegOffsetX = r.i32();
+        item.chairLegOffsetY = r.i32();
+        item.chairTexture = r.string(false, item.id);
+      }
+      if (version >= 16) item.itemRenderer = r.string(false, item.id);
+      if (version >= 17) item.extraFlags1 = r.i32();
+      if (version >= 18) item.itemRendererHash = r.i32();
+      if (version >= 19) item.unknownBytes2 = r.bytes(9);
+      if (version >= 21) item.unknownShort1 = r.i16();
+      if (version >= 22) item.info = r.string(false, item.id);
+      if (version >= 23) item.recipe = [r.u16(), r.u16()];
+      if (version >= 24) item.unknownByte1 = r.i8();
+      if (version >= 25) {
+        item.hitSoundFX = r.string(false, item.id);
+        item.hitSoundFXHash = r.u32();
+      }
+      if (version >= 26) item.unknownByte2 = r.u8();
+    }
+
+    items[n] = item;
+  }
+
+  return { version, itemCount, items, bytesRead: r.pos, bytesTotal: arrayBuffer.byteLength };
+}
+
+function saveItemsDat(version, items) {
+  const w = new BinWriter(Math.max(1 << 16, items.length * 300));
+  w.u16(version);
+  w.i32(items.length);
+
+  for (const item of items) {
+    w.i32(item.id);
+    w.u16(item.flags);
+    w.u8(item.type);
+    w.u8(item.materialType);
+
+    w.string(item.name, true, item.id);
+    w.string(item.texture, false, item.id);
+
+    w.i32(item.textureHash);
+    w.u8(item.visualEffectType);
+    w.i32(item.cookingTime);
+
+    w.u8(item.textureX);
+    w.u8(item.textureY);
+    w.u8(item.storageType);
+    w.u8(item.isStripeyWallpaper);
+    w.u8(item.collisionType);
+    w.u8(Math.round(item.breakHits * 6));
+
+    w.i32(item.resetStateAfter);
+    w.u8(item.bodyPartType);
+    w.i16(item.rarity);
+    w.u8(item.maxAmount);
+
+    w.string(item.extraFile, false, item.id);
+    w.i32(item.extraFileHash);
+    w.i32(item.audioVolume);
+
+    w.string(item.petName, false, item.id);
+    w.string(item.petPrefix, false, item.id);
+    w.string(item.petSuffix, false, item.id);
+    w.string(item.petAbility, false, item.id);
+
+    w.u8(item.seedBase);
+    w.u8(item.seedOverlay);
+    w.u8(item.treeBase);
+    w.u8(item.treeLeaves);
+
+    w.i32(item.seedColor);
+    w.i32(item.seedOverlayColor);
+    w.i32(item.ingredient);
+    w.i32(item.growTime);
+
+    w.i32(item.fxFlags);
+
+    w.string(item.extraOptions, false, item.id);
+    w.string(item.texture2, false, item.id);
+    w.string(item.extraOptions2, false, item.id);
+
+    w.i32(item.unknownInt1);
+    w.i32(item.unknownInt2);
+    w.i32(item.flags2);
+
+    w.bytes(item.extraBytes);
+
+    w.i32(item.tileRange);
+    w.i32(item.vaultCapacity);
+
+    if (version >= 11) {
+      w.string(item.punchOptions, false, item.id);
+
+      if (version >= 12) {
+        w.i32(item.flags3);
+        w.bytes(item.bodyPart);
+      }
+      if (version >= 13) w.i32(item.lightRange);
+      if (version >= 14) w.i32(item.unknownInt3);
+      if (version >= 15) {
+        w.u8(item.canSit);
+        w.i32(item.playerOffsetX);
+        w.i32(item.playerOffsetY);
+        w.i32(item.chairTextureX);
+        w.i32(item.chairTextureY);
+        w.i32(item.chairLegOffsetX);
+        w.i32(item.chairLegOffsetY);
+        w.string(item.chairTexture, false, item.id);
+      }
+      if (version >= 16) w.string(item.itemRenderer, false, item.id);
+      if (version >= 17) w.i32(item.extraFlags1);
+      if (version >= 18) w.i32(item.itemRendererHash);
+      if (version >= 19) w.bytes(item.unknownBytes2);
+      if (version >= 21) w.i16(item.unknownShort1);
+      if (version >= 22) w.string(item.info, false, item.id);
+      if (version >= 23) { w.u16(item.recipe?.[0] ?? 0); w.u16(item.recipe?.[1] ?? 0); }
+      if (version >= 24) w.i8(item.unknownByte1);
+      if (version >= 25) {
+        w.string(item.hitSoundFX, false, item.id);
+        w.u32(item.hitSoundFXHash);
+      }
+      if (version >= 26) w.u8(item.unknownByte2);
+    }
+  }
+
+  return w.finish();
+}
+
+// ---- UI wiring ----
+
+let state = null; // { version, itemCount, items, bytesRead, bytesTotal }
+let selectedId = null;
+
+const fileInput = document.getElementById('fileInput');
+const statusEl = document.getElementById('status');
+const searchEl = document.getElementById('search');
+const rowsEl = document.getElementById('rows');
+const listHintEl = document.getElementById('listHint');
+const editorEl = document.getElementById('editor');
+const editorActionsEl = document.getElementById('editorActions');
+const downloadBtn = document.getElementById('downloadBtn');
+const applyBtn = document.getElementById('applyBtn');
+const revertBtn = document.getElementById('revertBtn');
+
+fileInput.addEventListener('change', async () => {
+  const file = fileInput.files[0];
+  if (!file) return;
+  statusEl.innerHTML = '<span class="badge">Parsing…</span>';
+  try {
+    const buf = await file.arrayBuffer();
+    const parsed = loadItemsDat(buf);
+    state = parsed;
+    selectedId = null;
+    renderStatus();
+    searchEl.disabled = false;
+    downloadBtn.disabled = false;
+    searchEl.value = '';
+    renderRows('');
+    editorEl.innerHTML = '<div class="hint">Select an item on the left to view/edit its fields.</div>';
+    editorActionsEl.style.display = 'none';
+  } catch (err) {
+    state = null;
+    downloadBtn.disabled = true;
+    searchEl.disabled = true;
+    statusEl.innerHTML = `<span class="badge bad">Invalid file — ${escapeHtml(err.message)}</span>`;
+    listHintEl.textContent = 'Could not parse this file as items.dat.';
+    rowsEl.innerHTML = '';
+  }
+});
+
+function renderStatus() {
+  const valid = state.bytesRead === state.bytesTotal;
+  const leftover = state.bytesTotal - state.bytesRead;
+  statusEl.innerHTML = `
+    <span class="badge">version ${state.version}</span>
+    <span class="badge">${state.itemCount.toLocaleString()} items</span>
+    <span class="badge ${valid ? 'ok' : 'bad'}">${valid ? 'Valid — fully parsed' : `Leftover ${leftover} bytes (unexpected)`}</span>
+  `;
+}
+
+searchEl.addEventListener('input', () => renderRows(searchEl.value.trim().toLowerCase()));
+
+function renderRows(query) {
+  if (!state) return;
+  let matches;
+  if (!query) {
+    matches = state.items.slice(0, 100);
+    listHintEl.textContent = state.items.length > 100
+      ? `Showing first 100 of ${state.items.length.toLocaleString()} — type to search.`
+      : '';
+  } else {
+    const isNum = /^\d+$/.test(query);
+    matches = state.items.filter((it) => {
+      if (isNum && it.id === Number(query)) return true;
+      return it.name.toLowerCase().includes(query);
+    }).slice(0, 300);
+    listHintEl.textContent = matches.length === 300 ? 'Showing first 300 matches.' : '';
+  }
+
+  rowsEl.innerHTML = matches.map((it) => `
+    <tr data-id="${it.id}" class="${it.id === selectedId ? 'selected' : ''}">
+      <td>${it.id}</td>
+      <td>${escapeHtml(it.name)}</td>
+      <td>${it.type}</td>
+      <td>${it.rarity}</td>
+      <td>${escapeHtml(it.texture)}</td>
+    </tr>
+  `).join('');
+
+  rowsEl.querySelectorAll('tr').forEach((tr) => {
+    tr.addEventListener('click', () => selectItem(Number(tr.dataset.id)));
+  });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  }[c]));
+}
+
+function selectItem(id) {
+  selectedId = id;
+  renderRows(searchEl.value.trim().toLowerCase());
+  const item = state.items.find((it) => it.id === id);
+  renderEditor(item);
+}
+
+const BYTE_FIELDS = new Set(['extraBytes', 'bodyPart', 'unknownBytes2']);
+const SKIP_FIELDS = new Set(['flags', 'recipe']);
+
+function renderEditor(item) {
+  editorActionsEl.style.display = 'flex';
+  let html = `<h2>#${item.id} — ${escapeHtml(item.name)}</h2>`;
+
+  html += '<fieldset><legend>flags</legend><div class="flags-grid">';
+  FLAG_NAMES.forEach((name, bit) => {
+    const checked = (item.flags & (1 << bit)) !== 0;
+    html += `<label><input type="checkbox" data-flagbit="${bit}" ${checked ? 'checked' : ''}> ${name}</label>`;
+  });
+  html += '</div></fieldset>';
+
+  if (item.recipe) {
+    html += `<fieldset><legend>recipe</legend>
+      <div class="field"><label>ingredient 1 id</label><input type="number" data-field="recipe0" value="${item.recipe[0]}"></div>
+      <div class="field"><label>ingredient 2 id</label><input type="number" data-field="recipe1" value="${item.recipe[1]}"></div>
+    </fieldset>`;
+  }
+
+  html += '<fieldset><legend>fields</legend>';
+  for (const key of Object.keys(item)) {
+    if (SKIP_FIELDS.has(key) || key === 'id') continue;
+    const value = item[key];
+    if (BYTE_FIELDS.has(key)) {
+      const hex = Array.from(value).map((b) => b.toString(16).padStart(2, '0')).join(' ');
+      html += `<div class="field"><label>${key} (read-only)</label><div class="hex">${hex}</div></div>`;
+    } else if (typeof value === 'number') {
+      html += `<div class="field"><label>${key}</label><input type="number" step="any" data-field="${key}" value="${value}"></div>`;
+    } else if (typeof value === 'string') {
+      html += `<div class="field"><label>${key}</label><input type="text" data-field="${key}" value="${escapeHtml(value)}"></div>`;
+    }
+  }
+  html += '</fieldset>';
+
+  editorEl.innerHTML = html;
+}
+
+applyBtn.addEventListener('click', () => {
+  const item = state.items.find((it) => it.id === selectedId);
+  if (!item) return;
+
+  let flags = 0;
+  editorEl.querySelectorAll('[data-flagbit]').forEach((el) => {
+    if (el.checked) flags |= (1 << Number(el.dataset.flagbit));
+  });
+  item.flags = flags;
+
+  editorEl.querySelectorAll('[data-field]').forEach((el) => {
+    const key = el.dataset.field;
+    if (key === 'recipe0') { item.recipe[0] = Number(el.value) || 0; return; }
+    if (key === 'recipe1') { item.recipe[1] = Number(el.value) || 0; return; }
+    if (el.type === 'number') item[key] = Number(el.value);
+    else item[key] = el.value;
+  });
+
+  renderRows(searchEl.value.trim().toLowerCase());
+  alert(`Applied changes to #${item.id} (in memory). Click "Download modified items.dat" to save to disk.`);
+});
+
+revertBtn.addEventListener('click', () => {
+  const item = state.items.find((it) => it.id === selectedId);
+  if (item) renderEditor(item);
+});
+
+downloadBtn.addEventListener('click', () => {
+  if (!state) return;
+  const bytes = saveItemsDat(state.version, state.items);
+  const blob = new Blob([bytes], { type: 'application/octet-stream' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'items.dat';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+});
+</script>
+</body>
+</html>
