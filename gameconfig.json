@@ -1,7 +1,7 @@
 [
   {
     "version": "1.56.1",
-    "core_url": "core.version.chronoprojects.com",
-    "version_url": "version.chronoprojects.com"
+    "core_url": "http://192.168.1.80:18080",
+    "version_url": "http://192.168.1.80:18080"
   }
 ]
