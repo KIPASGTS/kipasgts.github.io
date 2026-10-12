@@ -1,8 +1,8 @@
 [
   {
     "version": "1.56.1",
-    "core_url": "http://192.168.1.80:18080",
+    "core_url": "https://core.chronoprojects.com",
     "version_url": "https://raw.githubusercontent.com/zeynsetiawan260/gameassets-/refs/heads/main/live/",
-    "resource_url": "http://192.168.1.80:18080/cdn/"
+    "resource_url": "https://core.chronoprojects.com/cdn/"
   }
 ]
