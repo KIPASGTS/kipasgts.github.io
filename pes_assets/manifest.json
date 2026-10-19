@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "version": "pes-assets-11.1.1-311010101",
+  "app_version": "11.1.1",
+  "version_code": "311010101",
+  "source_package": "jp.konami.pesam",
+  "source_apks_sha256": "b43af52562991471709573cd03d56326e0180da4d36621018dc058ba4e22e7a4",
+  "created_utc": "2026-10-19T11:25:25Z",
+  "repository": "KIPASGTS/kipasgts.github.io",
+  "release_tag": "pes-assets-11.1.1-311010101",
+  "files": [
+    {
+      "path": "assetpacks/pad_ff_00/311010101/311010101/assets/pc0102_mobile_and.pak",
+      "pack": "pad_ff_00",
+      "kind": "native_asset",
+      "release_name": "pad_ff_00-311010101-pc0102_mobile_and.pak",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_00-311010101-pc0102_mobile_and.pak",
+      "size": 365,
+      "sha256": "94302c81ae2884803664417b996359c3e08117f00fcc8dfdb56e4548cc7d059a"
+    },
+    {
+      "path": "assetpacks/pad_ff_00/311010101/311010101/assets/pc0102_mobile_and.ucas",
+      "pack": "pad_ff_00",
+      "kind": "native_asset",
+      "release_name": "pad_ff_00-311010101-pc0102_mobile_and.ucas",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_00-311010101-pc0102_mobile_and.ucas",
+      "size": 444686352,
+      "sha256": "14ea7128a7e15e2502c09c05d041d80e04cd583140789f22651ca4395ceaabed"
+    },
+    {
+      "path": "assetpacks/pad_ff_00/311010101/311010101/assets/pc0102_mobile_and.utoc",
+      "pack": "pad_ff_00",
+      "kind": "native_asset",
+      "release_name": "pad_ff_00-311010101-pc0102_mobile_and.utoc",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_00-311010101-pc0102_mobile_and.utoc",
+      "size": 1762114,
+      "sha256": "9a874ff4ccf6604e5fd94b309dc0dd18f82e4ab231f7e8b30a50383872775211"
+    },
+    {
+      "path": "assetpacks/pad_ff_01/311010101/311010101/assets/pc0101_mobile_and.pak",
+      "pack": "pad_ff_01",
+      "kind": "native_asset",
+      "release_name": "pad_ff_01-311010101-pc0101_mobile_and.pak",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_01-311010101-pc0101_mobile_and.pak",
+      "size": 365,
+      "sha256": "0c9d79129f5ca913335ca2f864ae40d39818a16a12805c9ab55fa1329c7f9424"
+    },
+    {
+      "path": "assetpacks/pad_ff_01/311010101/311010101/assets/pc0101_mobile_and.ucas",
+      "pack": "pad_ff_01",
+      "kind": "native_asset",
+      "release_name": "pad_ff_01-311010101-pc0101_mobile_and.ucas",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_01-311010101-pc0101_mobile_and.ucas",
+      "size": 51851936,
+      "sha256": "ebb7ab0abdfae69e13d1694dda4538ec83cd6ea28a85871b3e651c0eeeed298a"
+    },
+    {
+      "path": "assetpacks/pad_ff_01/311010101/311010101/assets/pc0101_mobile_and.utoc",
+      "pack": "pad_ff_01",
+      "kind": "native_asset",
+      "release_name": "pad_ff_01-311010101-pc0101_mobile_and.utoc",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_01-311010101-pc0101_mobile_and.utoc",
+      "size": 243294,
+      "sha256": "b6df3d970853356c78e876546aa56d0293a37915b7d2dbb1dd99b3b402d118c4"
+    },
+    {
+      "path": "assetpacks/pad_ff_02/311010101/311010101/assets/pc0103_mobile_and.pak",
+      "pack": "pad_ff_02",
+      "kind": "native_asset",
+      "release_name": "pad_ff_02-311010101-pc0103_mobile_and.pak",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_02-311010101-pc0103_mobile_and.pak",
+      "size": 365,
+      "sha256": "1123252cd2112ce89691ffe88054d6bc07f6649ad664cdf82bcded61d371ce45"
+    },
+    {
+      "path": "assetpacks/pad_ff_02/311010101/311010101/assets/pc0103_mobile_and.ucas",
+      "pack": "pad_ff_02",
+      "kind": "native_asset",
+      "release_name": "pad_ff_02-311010101-pc0103_mobile_and.ucas",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_02-311010101-pc0103_mobile_and.ucas",
+      "size": 74635376,
+      "sha256": "6cd0799907b1e8f589208fca41436661e5fc437dba22d31301fba13cfe865938"
+    },
+    {
+      "path": "assetpacks/pad_ff_02/311010101/311010101/assets/pc0103_mobile_and.utoc",
+      "pack": "pad_ff_02",
+      "kind": "native_asset",
+      "release_name": "pad_ff_02-311010101-pc0103_mobile_and.utoc",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_02-311010101-pc0103_mobile_and.utoc",
+      "size": 950227,
+      "sha256": "ce1140e511ea281227c236b8dec2a59993bac5ca7395e66ed7394190a34993cf"
+    },
+    {
+      "path": "assetpacks/pad_ff_03/311010101/311010101/assets/pc1000_mobile_and.pak",
+      "pack": "pad_ff_03",
+      "kind": "native_asset",
+      "release_name": "pad_ff_03-311010101-pc1000_mobile_and.pak",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_03-311010101-pc1000_mobile_and.pak",
+      "size": 365,
+      "sha256": "b674cf02ef6f16b40fdfd065e660e4e1c2c98823baa0e82e1992851a96e8f7b7"
+    },
+    {
+      "path": "assetpacks/pad_ff_03/311010101/311010101/assets/pc1000_mobile_and.ucas",
+      "pack": "pad_ff_03",
+      "kind": "native_asset",
+      "release_name": "pad_ff_03-311010101-pc1000_mobile_and.ucas",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_03-311010101-pc1000_mobile_and.ucas",
+      "size": 365880992,
+      "sha256": "d1441c7197595bf617f7c3c960f51f9cc64e2010d93ccabe64acf3b80f3a9707"
+    },
+    {
+      "path": "assetpacks/pad_ff_03/311010101/311010101/assets/pc1000_mobile_and.utoc",
+      "pack": "pad_ff_03",
+      "kind": "native_asset",
+      "release_name": "pad_ff_03-311010101-pc1000_mobile_and.utoc",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_03-311010101-pc1000_mobile_and.utoc",
+      "size": 4788620,
+      "sha256": "f7255778b923836168eb841ebdffce2b3989b3ba908e8d279f1d632bab0d24db"
+    },
+    {
+      "path": "assetpacks/pad_ff_04/311010101/311010101/assets/pc1001_mobile_and.pak",
+      "pack": "pad_ff_04",
+      "kind": "native_asset",
+      "release_name": "pad_ff_04-311010101-pc1001_mobile_and.pak",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_04-311010101-pc1001_mobile_and.pak",
+      "size": 365,
+      "sha256": "92a832a167bcfb5221b7b589b14d17c1bf176a632a62fa41721372e5ca6e087f"
+    },
+    {
+      "path": "assetpacks/pad_ff_04/311010101/311010101/assets/pc1001_mobile_and.ucas",
+      "pack": "pad_ff_04",
+      "kind": "native_asset",
+      "release_name": "pad_ff_04-311010101-pc1001_mobile_and.ucas",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_04-311010101-pc1001_mobile_and.ucas",
+      "size": 403483840,
+      "sha256": "9e18962bb9d523ac5ab9c8e8a188d7949fab29d2d48cf04a4d2eb2b2a3f01060"
+    },
+    {
+      "path": "assetpacks/pad_ff_04/311010101/311010101/assets/pc1001_mobile_and.utoc",
+      "pack": "pad_ff_04",
+      "kind": "native_asset",
+      "release_name": "pad_ff_04-311010101-pc1001_mobile_and.utoc",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_04-311010101-pc1001_mobile_and.utoc",
+      "size": 4101358,
+      "sha256": "a8333c632cb919c66dd7eaa3a094fce0b57d2fe73c0235b3a02b76bae7bc8f3d"
+    },
+    {
+      "path": "assetpacks/pad_ff_05/311010101/311010101/assets/pc3001_mobile_and.pak",
+      "pack": "pad_ff_05",
+      "kind": "native_asset",
+      "release_name": "pad_ff_05-311010101-pc3001_mobile_and.pak",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_05-311010101-pc3001_mobile_and.pak",
+      "size": 365,
+      "sha256": "0eac8f5d8efe754227f36ea1e7f8faeea4afc21b7ba0e5c2c35dc14d5862d28d"
+    },
+    {
+      "path": "assetpacks/pad_ff_05/311010101/311010101/assets/pc3001_mobile_and.ucas",
+      "pack": "pad_ff_05",
+      "kind": "native_asset",
+      "release_name": "pad_ff_05-311010101-pc3001_mobile_and.ucas",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_05-311010101-pc3001_mobile_and.ucas",
+      "size": 257517248,
+      "sha256": "a816a07b6369976a8870ca05d7970b9675f210ffa3ab32843297d61095344c34"
+    },
+    {
+      "path": "assetpacks/pad_ff_05/311010101/311010101/assets/pc3001_mobile_and.utoc",
+      "pack": "pad_ff_05",
+      "kind": "native_asset",
+      "release_name": "pad_ff_05-311010101-pc3001_mobile_and.utoc",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_05-311010101-pc3001_mobile_and.utoc",
+      "size": 779229,
+      "sha256": "5318457999449c6801a96bdf0b8511ae6e740c9ccc68b331540bbd24ddaaecb7"
+    },
+    {
+      "path": "assetpacks/pad_ff_08/311010101/311010101/assets/pc3611_mobile_and.pak",
+      "pack": "pad_ff_08",
+      "kind": "native_asset",
+      "release_name": "pad_ff_08-311010101-pc3611_mobile_and.pak",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_08-311010101-pc3611_mobile_and.pak",
+      "size": 365,
+      "sha256": "0fae80555aa1ed1bc51b1a446c0fe2a5ccd6238f293950a9263b9407bc2adc71"
+    },
+    {
+      "path": "assetpacks/pad_ff_08/311010101/311010101/assets/pc3611_mobile_and.ucas",
+      "pack": "pad_ff_08",
+      "kind": "native_asset",
+      "release_name": "pad_ff_08-311010101-pc3611_mobile_and.ucas",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_08-311010101-pc3611_mobile_and.ucas",
+      "size": 147092432,
+      "sha256": "016503340364d853cc1aa040c317c00045ccdb4f9b742e9b2fc83a2afd8adbaa"
+    },
+    {
+      "path": "assetpacks/pad_ff_08/311010101/311010101/assets/pc3611_mobile_and.utoc",
+      "pack": "pad_ff_08",
+      "kind": "native_asset",
+      "release_name": "pad_ff_08-311010101-pc3611_mobile_and.utoc",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_08-311010101-pc3611_mobile_and.utoc",
+      "size": 4477391,
+      "sha256": "9c4734e31cc36d3e058febc4702f2e8381ec01e5f743f80bebf7e90a9b711d39"
+    },
+    {
+      "path": "assetpacks/pad_ff_09/311010101/311010101/assets/pc3700_mobile_and.pak",
+      "pack": "pad_ff_09",
+      "kind": "native_asset",
+      "release_name": "pad_ff_09-311010101-pc3700_mobile_and.pak",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_09-311010101-pc3700_mobile_and.pak",
+      "size": 365,
+      "sha256": "4bfd4f7c74670f5a6fccf4ec3197594c4eaa8b8c369383aee899ae1bc0efeec3"
+    },
+    {
+      "path": "assetpacks/pad_ff_09/311010101/311010101/assets/pc3700_mobile_and.ucas",
+      "pack": "pad_ff_09",
+      "kind": "native_asset",
+      "release_name": "pad_ff_09-311010101-pc3700_mobile_and.ucas",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_09-311010101-pc3700_mobile_and.ucas",
+      "size": 193341792,
+      "sha256": "b8236cd4fd9ea3f7cb1a5d2ea3315681e7a7683673bd65c463f5862ce2e45881"
+    },
+    {
+      "path": "assetpacks/pad_ff_09/311010101/311010101/assets/pc3700_mobile_and.utoc",
+      "pack": "pad_ff_09",
+      "kind": "native_asset",
+      "release_name": "pad_ff_09-311010101-pc3700_mobile_and.utoc",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_09-311010101-pc3700_mobile_and.utoc",
+      "size": 570403,
+      "sha256": "b40989c9ae0acb8e16c27c31cfd82134eafc9e1f76f5de4cc96e2c6c1d9c643e"
+    },
+    {
+      "path": "assetpacks/pad_ff_10/311010101/311010101/assets/pc4000_mobile_and.pak",
+      "pack": "pad_ff_10",
+      "kind": "native_asset",
+      "release_name": "pad_ff_10-311010101-pc4000_mobile_and.pak",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_10-311010101-pc4000_mobile_and.pak",
+      "size": 365,
+      "sha256": "19b52841e7da94ff9d62dcefb1f23a649dbfb05e9384fd6c2dee26878f80b4a4"
+    },
+    {
+      "path": "assetpacks/pad_ff_10/311010101/311010101/assets/pc4000_mobile_and.ucas",
+      "pack": "pad_ff_10",
+      "kind": "native_asset",
+      "release_name": "pad_ff_10-311010101-pc4000_mobile_and.ucas",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_10-311010101-pc4000_mobile_and.ucas",
+      "size": 37267664,
+      "sha256": "ac45f72f100225f21c7953fabcad0f62de77665a0923b7cf48131444fb6f0ee1"
+    },
+    {
+      "path": "assetpacks/pad_ff_10/311010101/311010101/assets/pc4000_mobile_and.utoc",
+      "pack": "pad_ff_10",
+      "kind": "native_asset",
+      "release_name": "pad_ff_10-311010101-pc4000_mobile_and.utoc",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_10-311010101-pc4000_mobile_and.utoc",
+      "size": 110518,
+      "sha256": "fb423c42af844f8e02192796878325e0e51602171404d89c0b7931f7cf968147"
+    },
+    {
+      "path": "assetpacks/pad_ff_11/311010101/311010101/assets/pc7000_mobile_and.pak",
+      "pack": "pad_ff_11",
+      "kind": "native_asset",
+      "release_name": "pad_ff_11-311010101-pc7000_mobile_and.pak",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_11-311010101-pc7000_mobile_and.pak",
+      "size": 132725571,
+      "sha256": "c1ad273a5adfcc958779cfd76ebd2ecc22155b0eccd6517d893d9165c56441f7"
+    },
+    {
+      "path": "assetpacks/pad_ff_11/311010101/311010101/assets/pc7000_mobile_and.ucas",
+      "pack": "pad_ff_11",
+      "kind": "native_asset",
+      "release_name": "pad_ff_11-311010101-pc7000_mobile_and.ucas",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_11-311010101-pc7000_mobile_and.ucas",
+      "size": 266384,
+      "sha256": "93babb1055df7db853985e8937e58d898d4adaf692641ab881a51dcd6086b6f4"
+    },
+    {
+      "path": "assetpacks/pad_ff_11/311010101/311010101/assets/pc7000_mobile_and.utoc",
+      "pack": "pad_ff_11",
+      "kind": "native_asset",
+      "release_name": "pad_ff_11-311010101-pc7000_mobile_and.utoc",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/pad_ff_11-311010101-pc7000_mobile_and.utoc",
+      "size": 35622,
+      "sha256": "ad3847ca0f5a428fd80cf6b27ac9aac5a19227f5510d9f506f5ecc3464af0eaa"
+    },
+    {
+      "path": "kipas_assets/apk/split_pad_it_0.apk",
+      "pack": "split_pad_it_0",
+      "kind": "apk_assets",
+      "release_name": "apk-assets-311010101-split_pad_it_0.apk",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/apk-assets-311010101-split_pad_it_0.apk",
+      "size": 387313419,
+      "sha256": "9e238d66e7fa0e063fd1499aed7b63abdc3b00b8aa77450b0d82d074b740c88b"
+    },
+    {
+      "path": "kipas_assets/apk/split_pad_it_1.apk",
+      "pack": "split_pad_it_1",
+      "kind": "apk_assets",
+      "release_name": "apk-assets-311010101-split_pad_it_1.apk",
+      "url": "https://github.com/KIPASGTS/kipasgts.github.io/releases/download/pes-assets-11.1.1-311010101/apk-assets-311010101-split_pad_it_1.apk",
+      "size": 400339664,
+      "sha256": "dd3d1c1b5cf89e30863af1326471b1d37a9289517b594b3e44d5afe70c407fa9"
+    }
+  ],
+  "total_size": 2914224731
+}
