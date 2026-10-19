@@ -1,0 +1,590 @@
+{
+ "schema_version": 1,
+ "repository": "KIPASGTS/kipasgts.github.io",
+ "description": "KIPAS_FOOTBAL server assets: /banner/... images and /livedata/... files at the same paths under pes_assets/",
+ "files": [
+  {
+   "path": "banner/achievement/000240/0f336a2c9ae42f709475c5edee210d34b6885b4a5e2f03a7471d5cd098999e8c",
+   "kind": "banner",
+   "size": 119996,
+   "sha256": "0f336a2c9ae42f709475c5edee210d34b6885b4a5e2f03a7471d5cd098999e8c"
+  },
+  {
+   "path": "banner/agent/001366/6eb338debf84299c17be057ba881c598d40cfd88dbf7663fb7ac753b70235edb",
+   "kind": "banner",
+   "size": 331250,
+   "sha256": "6eb338debf84299c17be057ba881c598d40cfd88dbf7663fb7ac753b70235edb"
+  },
+  {
+   "path": "banner/agent/001366/ca685282d96ebcf7fe2be684a54543261df36aadf9eea238035ad0c7c38d4c5c",
+   "kind": "banner",
+   "size": 80612,
+   "sha256": "ca685282d96ebcf7fe2be684a54543261df36aadf9eea238035ad0c7c38d4c5c"
+  },
+  {
+   "path": "banner/agent/001385/3462bf4cce1fd35199d0c249e3c94debe9b4223c57f702d4acc71e8f5f5b9de8",
+   "kind": "banner",
+   "size": 320105,
+   "sha256": "3462bf4cce1fd35199d0c249e3c94debe9b4223c57f702d4acc71e8f5f5b9de8"
+  },
+  {
+   "path": "banner/agent/001385/f97a4d171ff7082ccfd9b0107ff83a694ea949e9a43786e4f59269de1185b612",
+   "kind": "banner",
+   "size": 96952,
+   "sha256": "f97a4d171ff7082ccfd9b0107ff83a694ea949e9a43786e4f59269de1185b612"
+  },
+  {
+   "path": "banner/agent/001386/2252166f942997295a4aa15a4e89dd04ca102177e4e15c7bfa1a4d56f7fafcbc",
+   "kind": "banner",
+   "size": 293512,
+   "sha256": "2252166f942997295a4aa15a4e89dd04ca102177e4e15c7bfa1a4d56f7fafcbc"
+  },
+  {
+   "path": "banner/agent/001386/ca6593c39cb95c8f6d15aafc30e15cb293f9f0bd101c579d3989c4e2c07ff433",
+   "kind": "banner",
+   "size": 83463,
+   "sha256": "ca6593c39cb95c8f6d15aafc30e15cb293f9f0bd101c579d3989c4e2c07ff433"
+  },
+  {
+   "path": "banner/agent/001401/2b88d06c8c52e645fca37160a9e2ef6ddabe895c0082fd422664ba27e7aad00b",
+   "kind": "banner",
+   "size": 71064,
+   "sha256": "2b88d06c8c52e645fca37160a9e2ef6ddabe895c0082fd422664ba27e7aad00b"
+  },
+  {
+   "path": "banner/agent/001401/5ecb6d644e1dda8f0c892ef4143a4f47fc29f40b537304e9c83e9c2b9e70fea8",
+   "kind": "banner",
+   "size": 247572,
+   "sha256": "5ecb6d644e1dda8f0c892ef4143a4f47fc29f40b537304e9c83e9c2b9e70fea8"
+  },
+  {
+   "path": "banner/agent/001403/308aa700b860dc6e275bf3343bd7a2c34ef9842b09d3b4280676ccb4f62f625d",
+   "kind": "banner",
+   "size": 89367,
+   "sha256": "308aa700b860dc6e275bf3343bd7a2c34ef9842b09d3b4280676ccb4f62f625d"
+  },
+  {
+   "path": "banner/agent/001403/65be1f7f0d8e4e134fa0770f17dda1ada584c9af92c7fb665c04999949541b8f",
+   "kind": "banner",
+   "size": 149622,
+   "sha256": "65be1f7f0d8e4e134fa0770f17dda1ada584c9af92c7fb665c04999949541b8f"
+  },
+  {
+   "path": "banner/agent/001403/a0df96bc55966f2e91397630f092bec44320ceacd23e49d0863d17a96027c889",
+   "kind": "banner",
+   "size": 345372,
+   "sha256": "a0df96bc55966f2e91397630f092bec44320ceacd23e49d0863d17a96027c889"
+  },
+  {
+   "path": "banner/agent/001404/308aa700b860dc6e275bf3343bd7a2c34ef9842b09d3b4280676ccb4f62f625d",
+   "kind": "banner",
+   "size": 89367,
+   "sha256": "308aa700b860dc6e275bf3343bd7a2c34ef9842b09d3b4280676ccb4f62f625d"
+  },
+  {
+   "path": "banner/agent/001404/65be1f7f0d8e4e134fa0770f17dda1ada584c9af92c7fb665c04999949541b8f",
+   "kind": "banner",
+   "size": 149622,
+   "sha256": "65be1f7f0d8e4e134fa0770f17dda1ada584c9af92c7fb665c04999949541b8f"
+  },
+  {
+   "path": "banner/agent/001404/f54980e10616d51fab949b47c8d028fc0f74a51cfdd0ff070826ad1ad92a4f67",
+   "kind": "banner",
+   "size": 342016,
+   "sha256": "f54980e10616d51fab949b47c8d028fc0f74a51cfdd0ff070826ad1ad92a4f67"
+  },
+  {
+   "path": "banner/agent/001405/810fa854ed2595432b8bbe7a8be4ced4904d13572bf0e7a9f53539955b21f9a5",
+   "kind": "banner",
+   "size": 128050,
+   "sha256": "810fa854ed2595432b8bbe7a8be4ced4904d13572bf0e7a9f53539955b21f9a5"
+  },
+  {
+   "path": "banner/agent/001405/a43797a1c41a16b645baca537d0627dba7631c3d8bbe93713837957005060c69",
+   "kind": "banner",
+   "size": 198776,
+   "sha256": "a43797a1c41a16b645baca537d0627dba7631c3d8bbe93713837957005060c69"
+  },
+  {
+   "path": "banner/agent/001405/eecc9a24341a698c5591133dc3d928b533adf46f4172ef5e3f4623d3e0b29722",
+   "kind": "banner",
+   "size": 500492,
+   "sha256": "eecc9a24341a698c5591133dc3d928b533adf46f4172ef5e3f4623d3e0b29722"
+  },
+  {
+   "path": "banner/agent/001406/357a37bfd61acdd735dc84f19e43c1eb76813080b3487c01665411ac1ff5f430",
+   "kind": "banner",
+   "size": 85102,
+   "sha256": "357a37bfd61acdd735dc84f19e43c1eb76813080b3487c01665411ac1ff5f430"
+  },
+  {
+   "path": "banner/agent/001406/968514e0f6c5aa3b86282d9bf526993656980e6c55f74e3a38df8eb5dbbb258c",
+   "kind": "banner",
+   "size": 332075,
+   "sha256": "968514e0f6c5aa3b86282d9bf526993656980e6c55f74e3a38df8eb5dbbb258c"
+  },
+  {
+   "path": "banner/agent/001407/069c19f34c46e9d25bf703fd967426990d40754dc5201e489195c8be3ee79d67",
+   "kind": "banner",
+   "size": 113397,
+   "sha256": "069c19f34c46e9d25bf703fd967426990d40754dc5201e489195c8be3ee79d67"
+  },
+  {
+   "path": "banner/agent/001407/06b66f39e940bee18ed1bec0b98e2decf196177e5efcbbd868a9db284c63911c",
+   "kind": "banner",
+   "size": 179129,
+   "sha256": "06b66f39e940bee18ed1bec0b98e2decf196177e5efcbbd868a9db284c63911c"
+  },
+  {
+   "path": "banner/agent/001407/b7f158826006fa82a896efcfbefa0bc92f297cc316e9b543295b43c920817d2f",
+   "kind": "banner",
+   "size": 435857,
+   "sha256": "b7f158826006fa82a896efcfbefa0bc92f297cc316e9b543295b43c920817d2f"
+  },
+  {
+   "path": "banner/agent/001438/a6c83f3477582e7b96353c2c8913348a5a46f1cc973c71c0e4ec220335ac03b8",
+   "kind": "banner",
+   "size": 386551,
+   "sha256": "a6c83f3477582e7b96353c2c8913348a5a46f1cc973c71c0e4ec220335ac03b8"
+  },
+  {
+   "path": "banner/agent/001438/b04e60438d0ed598c77044f9b48c7ccbf17a1f3bc8089156d733a4bf9d43acdc",
+   "kind": "banner",
+   "size": 114758,
+   "sha256": "b04e60438d0ed598c77044f9b48c7ccbf17a1f3bc8089156d733a4bf9d43acdc"
+  },
+  {
+   "path": "banner/agent/001442/2650662f56ede72410ec3cee953c5b0cc2c17337a8d1b4108018843fb0f278e8",
+   "kind": "banner",
+   "size": 296499,
+   "sha256": "2650662f56ede72410ec3cee953c5b0cc2c17337a8d1b4108018843fb0f278e8"
+  },
+  {
+   "path": "banner/agent/001442/721332254acb8ed4cd277a91173c35f0374aee3d939c9374a4868c46544649d4",
+   "kind": "banner",
+   "size": 44817,
+   "sha256": "721332254acb8ed4cd277a91173c35f0374aee3d939c9374a4868c46544649d4"
+  },
+  {
+   "path": "banner/agent/001451/4e7cb324498bfdb9e008351eeda0e2f962c0b48cbd01799bc44e122bbcd4c75d",
+   "kind": "banner",
+   "size": 334921,
+   "sha256": "4e7cb324498bfdb9e008351eeda0e2f962c0b48cbd01799bc44e122bbcd4c75d"
+  },
+  {
+   "path": "banner/agent/001451/647ccd2950e5bcd8dc19d6222833e2e8af79ae9ad9492119c60f4f8210b78b05",
+   "kind": "banner",
+   "size": 89187,
+   "sha256": "647ccd2950e5bcd8dc19d6222833e2e8af79ae9ad9492119c60f4f8210b78b05"
+  },
+  {
+   "path": "banner/agent/001451/89a83a00d4df3780583bd176880983f9a6498df8ab31e2c5bc2b5b79cf191187",
+   "kind": "banner",
+   "size": 119676,
+   "sha256": "89a83a00d4df3780583bd176880983f9a6498df8ab31e2c5bc2b5b79cf191187"
+  },
+  {
+   "path": "banner/agent/009982/08ed74811e90024959bc1fb2203f8b7a58b9a7bd12b7151d7f5649fc763ce530",
+   "kind": "banner",
+   "size": 108622,
+   "sha256": "08ed74811e90024959bc1fb2203f8b7a58b9a7bd12b7151d7f5649fc763ce530"
+  },
+  {
+   "path": "banner/agent/009982/4bfa4abe8ed951c44e0238ac27bd359b6058c1b6ab543b0ad4c48505f63e27f2",
+   "kind": "banner",
+   "size": 424408,
+   "sha256": "4bfa4abe8ed951c44e0238ac27bd359b6058c1b6ab543b0ad4c48505f63e27f2"
+  },
+  {
+   "path": "banner/agent/009982/dfff60f484febdfb50862da0bb69aca7ea0aac53209a07f218678f3da901fa8c",
+   "kind": "banner",
+   "size": 113484,
+   "sha256": "dfff60f484febdfb50862da0bb69aca7ea0aac53209a07f218678f3da901fa8c"
+  },
+  {
+   "path": "banner/campaign/000904/4c90c91865243ccd140bd025c810b0642ecd27d64ac2ccbad98ede7f057817a7",
+   "kind": "banner",
+   "size": 231737,
+   "sha256": "4c90c91865243ccd140bd025c810b0642ecd27d64ac2ccbad98ede7f057817a7"
+  },
+  {
+   "path": "banner/campaign/000904/a33e81736c597b0cfd39f31b559188cea645a7d63b8e35e490e3bedc8a81879d",
+   "kind": "banner",
+   "size": 459047,
+   "sha256": "a33e81736c597b0cfd39f31b559188cea645a7d63b8e35e490e3bedc8a81879d"
+  },
+  {
+   "path": "banner/customize/000003/908e117147e4476c1169c2fbceec7d07a465a36adb51273fbec4f29ad051d88d",
+   "kind": "banner",
+   "size": 110524,
+   "sha256": "908e117147e4476c1169c2fbceec7d07a465a36adb51273fbec4f29ad051d88d"
+  },
+  {
+   "path": "banner/customize/000003/be2a6fbeb59acfdf66a552d6e052b87185854eee658d7e392e31f4d8ef9950d0",
+   "kind": "banner",
+   "size": 351367,
+   "sha256": "be2a6fbeb59acfdf66a552d6e052b87185854eee658d7e392e31f4d8ef9950d0"
+  },
+  {
+   "path": "banner/customize/000004/4df05092be8defce1c586d0905c5dc771143593f357085c4a85fa30a9a7d6a13",
+   "kind": "banner",
+   "size": 350403,
+   "sha256": "4df05092be8defce1c586d0905c5dc771143593f357085c4a85fa30a9a7d6a13"
+  },
+  {
+   "path": "banner/customize/000004/aee66d6ad0027867ddd1683a66e9d8ff371b64e682b4287d128cd9c634e3c216",
+   "kind": "banner",
+   "size": 112303,
+   "sha256": "aee66d6ad0027867ddd1683a66e9d8ff371b64e682b4287d128cd9c634e3c216"
+  },
+  {
+   "path": "banner/customize/000005/6a62b0dfdad26613bc07bae7999c69ee38a22827e26e6a81b6c1e485e5429ea3",
+   "kind": "banner",
+   "size": 354668,
+   "sha256": "6a62b0dfdad26613bc07bae7999c69ee38a22827e26e6a81b6c1e485e5429ea3"
+  },
+  {
+   "path": "banner/customize/000005/caef402478cd4814acd79ceaf453646e4b0b60c97f232af3a2942fa8002f00aa",
+   "kind": "banner",
+   "size": 109178,
+   "sha256": "caef402478cd4814acd79ceaf453646e4b0b60c97f232af3a2942fa8002f00aa"
+  },
+  {
+   "path": "banner/customize/000006/2939ec75bdb73dbfecf6813ad92b3af901589af1963c1e96a847ff6973d31b48",
+   "kind": "banner",
+   "size": 372789,
+   "sha256": "2939ec75bdb73dbfecf6813ad92b3af901589af1963c1e96a847ff6973d31b48"
+  },
+  {
+   "path": "banner/customize/000006/4e0f85a4949ad027fb8cc9eec63794b1ac1916b7f791b57f6731392348193c08",
+   "kind": "banner",
+   "size": 115477,
+   "sha256": "4e0f85a4949ad027fb8cc9eec63794b1ac1916b7f791b57f6731392348193c08"
+  },
+  {
+   "path": "banner/customize/000007/118575d727166890dc92a1aed40f3dcd99330abe6d4bf98f9b8472fb661b61c4",
+   "kind": "banner",
+   "size": 340193,
+   "sha256": "118575d727166890dc92a1aed40f3dcd99330abe6d4bf98f9b8472fb661b61c4"
+  },
+  {
+   "path": "banner/customize/000007/ff7d0d3bfe5e36c8a0eeadf9a503edb0c9ac01452ac9b0454ee7f09fe69a62fc",
+   "kind": "banner",
+   "size": 111378,
+   "sha256": "ff7d0d3bfe5e36c8a0eeadf9a503edb0c9ac01452ac9b0454ee7f09fe69a62fc"
+  },
+  {
+   "path": "banner/customize/000008/809386b488737f1295dfe6597f5f0bffa915ec31356a7f486d9bb1916c63702e",
+   "kind": "banner",
+   "size": 376793,
+   "sha256": "809386b488737f1295dfe6597f5f0bffa915ec31356a7f486d9bb1916c63702e"
+  },
+  {
+   "path": "banner/customize/000008/f257a6be0fc0eba5cac656052f6ea9fda17484646ba785934aa9b1828fcc83e2",
+   "kind": "banner",
+   "size": 103852,
+   "sha256": "f257a6be0fc0eba5cac656052f6ea9fda17484646ba785934aa9b1828fcc83e2"
+  },
+  {
+   "path": "banner/customize/000009/146049c27a07a9025039cff7ab8d265838c77ecb23388ad26dc929e7096049a2",
+   "kind": "banner",
+   "size": 363846,
+   "sha256": "146049c27a07a9025039cff7ab8d265838c77ecb23388ad26dc929e7096049a2"
+  },
+  {
+   "path": "banner/customize/000009/cbf16058c8ff48e14245e0beb4d9020265ae353cf00e2eac943d5233ae594326",
+   "kind": "banner",
+   "size": 116899,
+   "sha256": "cbf16058c8ff48e14245e0beb4d9020265ae353cf00e2eac943d5233ae594326"
+  },
+  {
+   "path": "banner/customize/000010/14fdd6bc56bf3a2a7182b390af448e84bece93b0beec783d495256f7675c786a",
+   "kind": "banner",
+   "size": 124415,
+   "sha256": "14fdd6bc56bf3a2a7182b390af448e84bece93b0beec783d495256f7675c786a"
+  },
+  {
+   "path": "banner/customize/000010/8cfc14e65dd7fbe0b78ca8f12fd4ddab5b49c6ed9ab6407d086da8725483d603",
+   "kind": "banner",
+   "size": 376865,
+   "sha256": "8cfc14e65dd7fbe0b78ca8f12fd4ddab5b49c6ed9ab6407d086da8725483d603"
+  },
+  {
+   "path": "banner/customize/000011/64626a32884bdd04938ab432257ab9461efa9aebb421587f15a4a29a28a42a35",
+   "kind": "banner",
+   "size": 126491,
+   "sha256": "64626a32884bdd04938ab432257ab9461efa9aebb421587f15a4a29a28a42a35"
+  },
+  {
+   "path": "banner/customize/000011/aee211e42845292374a3cbc7d1045943c3460052ad0ce45f14ccd62e4fa4a319",
+   "kind": "banner",
+   "size": 383642,
+   "sha256": "aee211e42845292374a3cbc7d1045943c3460052ad0ce45f14ccd62e4fa4a319"
+  },
+  {
+   "path": "banner/customize/000023/09b36bdf02fa87b7d5ddc506cb4fe91800f706466dfaedbf25e252666bd5a5be",
+   "kind": "banner",
+   "size": 111622,
+   "sha256": "09b36bdf02fa87b7d5ddc506cb4fe91800f706466dfaedbf25e252666bd5a5be"
+  },
+  {
+   "path": "banner/customize/000023/8733c595b82f37caa6152bd2b6bbd6ac5bfb073668d6437c4d195f4dca11151c",
+   "kind": "banner",
+   "size": 376133,
+   "sha256": "8733c595b82f37caa6152bd2b6bbd6ac5bfb073668d6437c4d195f4dca11151c"
+  },
+  {
+   "path": "banner/customize/000023/db9f0b6225bc2aded6e550a40ef2aa9803a9f808541e5ef35fe1e02093975315",
+   "kind": "banner",
+   "size": 64234,
+   "sha256": "db9f0b6225bc2aded6e550a40ef2aa9803a9f808541e5ef35fe1e02093975315"
+  },
+  {
+   "path": "banner/pack/000093/0583e36105ceedea2160185d9f48ea961006ae5772b8fe55c380039d937bedcb",
+   "kind": "banner",
+   "size": 553271,
+   "sha256": "0583e36105ceedea2160185d9f48ea961006ae5772b8fe55c380039d937bedcb"
+  },
+  {
+   "path": "banner/pack/000093/0c09346f1acc2eada3390674eff75b96eeb72f1c1ad06f5e65ebaaea620f9749",
+   "kind": "banner",
+   "size": 84201,
+   "sha256": "0c09346f1acc2eada3390674eff75b96eeb72f1c1ad06f5e65ebaaea620f9749"
+  },
+  {
+   "path": "banner/pack/000094/6b78a6ea0cb9e6c1ae04522bc7c9bc82a3c2fcf3391303014c06356e71708ff1",
+   "kind": "banner",
+   "size": 450849,
+   "sha256": "6b78a6ea0cb9e6c1ae04522bc7c9bc82a3c2fcf3391303014c06356e71708ff1"
+  },
+  {
+   "path": "banner/pack/000094/938dde90c7c66991781a6d7be6a269c577d6b8fa37f7d4abc8781724c36a5a47",
+   "kind": "banner",
+   "size": 110885,
+   "sha256": "938dde90c7c66991781a6d7be6a269c577d6b8fa37f7d4abc8781724c36a5a47"
+  },
+  {
+   "path": "banner/pack/000100/1806b31178539c969621adf153421f7ee4f943869570114797bbc760ffbf4efb",
+   "kind": "banner",
+   "size": 264560,
+   "sha256": "1806b31178539c969621adf153421f7ee4f943869570114797bbc760ffbf4efb"
+  },
+  {
+   "path": "banner/pack/000100/ceb06cb055aca656ff81b5779cea790abaf6879772bae84a65f02490127979a7",
+   "kind": "banner",
+   "size": 73869,
+   "sha256": "ceb06cb055aca656ff81b5779cea790abaf6879772bae84a65f02490127979a7"
+  },
+  {
+   "path": "banner/pack/000101/72339875c9aeacdd319508ac86bf9be4ff3e862971f36ceb342766ee83f52581",
+   "kind": "banner",
+   "size": 74478,
+   "sha256": "72339875c9aeacdd319508ac86bf9be4ff3e862971f36ceb342766ee83f52581"
+  },
+  {
+   "path": "banner/pack/000101/a47688a3edc8ec1441242a2ea45d41f15b0cb8a2622af7a170a8fa97836175a3",
+   "kind": "banner",
+   "size": 275511,
+   "sha256": "a47688a3edc8ec1441242a2ea45d41f15b0cb8a2622af7a170a8fa97836175a3"
+  },
+  {
+   "path": "banner/pack/000102/9ad2636b99e385162ea4ea12a7be4459b321104d4e97feacb02499bb7318170b",
+   "kind": "banner",
+   "size": 501829,
+   "sha256": "9ad2636b99e385162ea4ea12a7be4459b321104d4e97feacb02499bb7318170b"
+  },
+  {
+   "path": "banner/pack/000102/e32ca210ac122b7ae6532cfde7dd6ffed282ab6044e0fb5435c31230ea706813",
+   "kind": "banner",
+   "size": 115662,
+   "sha256": "e32ca210ac122b7ae6532cfde7dd6ffed282ab6044e0fb5435c31230ea706813"
+  },
+  {
+   "path": "banner/pack/000103/069667b54bdacf2e78a2a6105be0ce827643c9ffab73918b1f7bbb87519ca952",
+   "kind": "banner",
+   "size": 123421,
+   "sha256": "069667b54bdacf2e78a2a6105be0ce827643c9ffab73918b1f7bbb87519ca952"
+  },
+  {
+   "path": "banner/pack/000103/2909af5138f984094a9f3cca96cf9b18632e487e38df8ee2bcd72cc732244bc3",
+   "kind": "banner",
+   "size": 122305,
+   "sha256": "2909af5138f984094a9f3cca96cf9b18632e487e38df8ee2bcd72cc732244bc3"
+  },
+  {
+   "path": "banner/pack/000103/2ce7fdc7311a612956c04abe5fbe3ddded50d4b5be89479ebe292dd5f364d09c",
+   "kind": "banner",
+   "size": 541008,
+   "sha256": "2ce7fdc7311a612956c04abe5fbe3ddded50d4b5be89479ebe292dd5f364d09c"
+  },
+  {
+   "path": "banner/pack/000106/8f73918626c43e8090f994b86b7ad6756526eefcdbb24401a16a8533a46cf904",
+   "kind": "banner",
+   "size": 398379,
+   "sha256": "8f73918626c43e8090f994b86b7ad6756526eefcdbb24401a16a8533a46cf904"
+  },
+  {
+   "path": "banner/pack/000106/d9c0d6f8edc969d7191066d2d6a39d3dd0353c446682965136f68ee2a64f707e",
+   "kind": "banner",
+   "size": 87976,
+   "sha256": "d9c0d6f8edc969d7191066d2d6a39d3dd0353c446682965136f68ee2a64f707e"
+  },
+  {
+   "path": "banner/pack/000107/301f595179673674aa41cc30cc8fcf699b0f80b00f3f598d72fbf70ae1b0ed24",
+   "kind": "banner",
+   "size": 443954,
+   "sha256": "301f595179673674aa41cc30cc8fcf699b0f80b00f3f598d72fbf70ae1b0ed24"
+  },
+  {
+   "path": "banner/pack/000107/94a5e316be082e6ee053b37a2bb2c2dff54e3306ae266f1e42185a2789a05270",
+   "kind": "banner",
+   "size": 94553,
+   "sha256": "94a5e316be082e6ee053b37a2bb2c2dff54e3306ae266f1e42185a2789a05270"
+  },
+  {
+   "path": "banner/pack/000108/13fef3f2b2ef8cb3c66d327d022130775d5e050449bd7337b70c9163053ef9ec",
+   "kind": "banner",
+   "size": 113177,
+   "sha256": "13fef3f2b2ef8cb3c66d327d022130775d5e050449bd7337b70c9163053ef9ec"
+  },
+  {
+   "path": "banner/pack/000108/576d13851249a2b12f6c606deceeec9655a9a48fb47ea9486ff11d9f734a6e72",
+   "kind": "banner",
+   "size": 198702,
+   "sha256": "576d13851249a2b12f6c606deceeec9655a9a48fb47ea9486ff11d9f734a6e72"
+  },
+  {
+   "path": "banner/pack/000108/95fe38326924741b8ad86d2ba80b1917336f19d9d1eaa3d624141e48651ad50c",
+   "kind": "banner",
+   "size": 474175,
+   "sha256": "95fe38326924741b8ad86d2ba80b1917336f19d9d1eaa3d624141e48651ad50c"
+  },
+  {
+   "path": "banner/priority/efp/f84dbfb7b53a4323ef5372208fe16d33ba36827faa3cb3992c7dc18a8c0d0916",
+   "kind": "banner",
+   "size": 66934,
+   "sha256": "f84dbfb7b53a4323ef5372208fe16d33ba36827faa3cb3992c7dc18a8c0d0916"
+  },
+  {
+   "path": "banner/priority/pack/2a35de3ba08ba86a0256fc5ecae691932a02312c483c056eeac34f7e27ab347b",
+   "kind": "banner",
+   "size": 114570,
+   "sha256": "2a35de3ba08ba86a0256fc5ecae691932a02312c483c056eeac34f7e27ab347b"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/dt870_mobile_and.cpk",
+   "kind": "livedata",
+   "size": 7323280,
+   "sha256": "27472fe8f02de4346910996cdc6200940937efee22bfe6eeb1f5326644b032e8"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9257_mobile_and.pak",
+   "kind": "livedata",
+   "size": 365,
+   "sha256": "a8135500c905108577fec26753a54caa31befccc026c7a1972cce2c9a677bdf9"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9257_mobile_and.ucas",
+   "kind": "livedata",
+   "size": 2894032,
+   "sha256": "90a8e75f6dc955496927fd67a2eacd7b6497bbe64a329feb5a9f17c221697b4d"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9257_mobile_and.utoc",
+   "kind": "livedata",
+   "size": 26970,
+   "sha256": "0c2fea6b39b7d8ac1c96e665df62c3ac7a34341f674dc73750b9640d737ce075"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9258_mobile_and.pak",
+   "kind": "livedata",
+   "size": 591602,
+   "sha256": "c5c85d50cb3255ae6d5f1357f3526b90f0dab868d20628a0a1e5913278c2a56f"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9258_mobile_and.ucas",
+   "kind": "livedata",
+   "size": 6266496,
+   "sha256": "2e84cef82c83bf10f275c136221f8fc58cf53cbec40d2d3324a977409c6b4d8a"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9258_mobile_and.utoc",
+   "kind": "livedata",
+   "size": 49017,
+   "sha256": "96c0dc1958d3715c2d278cf44039c993fc81647609be27ef286a86a1b3b7eac9"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9259_mobile_and.pak",
+   "kind": "livedata",
+   "size": 365,
+   "sha256": "d0cce30a7566fefa0d20a01c17070806ab8222f702e2ace7fbb7a6216a7344a9"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9259_mobile_and.ucas",
+   "kind": "livedata",
+   "size": 453872,
+   "sha256": "a75620c9f842236763920f72e81677ab937a3673b2bcb0c05fe37fe9bf6bc6ef"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9259_mobile_and.utoc",
+   "kind": "livedata",
+   "size": 5070,
+   "sha256": "9f73ffe9af1fe713ae0aa5a96c89e4a21a3d52454bac24717437d4d7f4e04961"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9260_mobile_and.pak",
+   "kind": "livedata",
+   "size": 365,
+   "sha256": "8f695a6f055f4d849134cc777c6b35cbe4ecb752e6737e60f6f8bd41edfe4362"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9260_mobile_and.ucas",
+   "kind": "livedata",
+   "size": 2425696,
+   "sha256": "1a6929c6553a8c9605a01d5e8339929bfa3ccd70d003553108240eb5babb9f41"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9260_mobile_and.utoc",
+   "kind": "livedata",
+   "size": 25924,
+   "sha256": "c202d983bf1e56a7689cc25d51762ec965b1a353d203ccca163be0ed7f50b7e4"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9261_mobile_and.pak",
+   "kind": "livedata",
+   "size": 365,
+   "sha256": "8676453f1a9f0a15f3b9beaea8aac4d86af198b1cfdb27f1acb7f73bce1a1a48"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9261_mobile_and.ucas",
+   "kind": "livedata",
+   "size": 9390144,
+   "sha256": "2c4c1c17854bd9340af9dea7ef81a01f5c292f2e703034990b06267a031a720d"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9261_mobile_and.utoc",
+   "kind": "livedata",
+   "size": 41644,
+   "sha256": "31d8583c17735cbf6680305f9b4040fbd91c8eed090196f84c20607a6e2f8d45"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9262_mobile_and.pak",
+   "kind": "livedata",
+   "size": 365,
+   "sha256": "572293f4d7ce17a00bb04e9f1e400005a8704946a039d3888d223d611db66e38"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9262_mobile_and.ucas",
+   "kind": "livedata",
+   "size": 7751456,
+   "sha256": "4c8471d49f80984b3d4e5202cbe0c22fb0d0740473cc409c2d11c4de049dbe18"
+  },
+  {
+   "path": "livedata/202610/14626155129fa09e81247dc069a398f1b96716a288a3ad7a8ee4f8106b25d723/r147889/pc9262_mobile_and.utoc",
+   "kind": "livedata",
+   "size": 46487,
+   "sha256": "b4158958abc75691b7439be88f027685e2ed32ed60c3e74884f95c3fa0b670f4"
+  }
+ ],
+ "total_size": 54937333
+}
