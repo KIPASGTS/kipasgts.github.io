@@ -346,6 +346,12 @@
    "sha256": "596706af8d45c0bde57b1df46f0e8d2e9b2ab35327de94c2b753d3679dc7fc8f"
   },
   {
+   "path": "banner/kipas/big-time/e28e3a0cf236a48f0437a4aa1572223a6bd4f282faa673324f16ae4324faa06c",
+   "kind": "banner",
+   "size": 6156,
+   "sha256": "e28e3a0cf236a48f0437a4aa1572223a6bd4f282faa673324f16ae4324faa06c"
+  },
+  {
    "path": "banner/kipas/big-time/f0676b4f9f952c1055478dc91cd1dfe316988415c6698d20f87b67c91730693e",
    "kind": "banner",
    "size": 29195,
@@ -364,16 +370,34 @@
    "sha256": "50c4014f30f8ec5e25d8575fab2f9729d27d0f8a36c0c50e74318b672ebd2229"
   },
   {
+   "path": "banner/kipas/epic/8f43d71bdfa23dbcbce954e32c12e0d6429d3b8b3a49377cc809d6d1876623ad",
+   "kind": "banner",
+   "size": 6299,
+   "sha256": "8f43d71bdfa23dbcbce954e32c12e0d6429d3b8b3a49377cc809d6d1876623ad"
+  },
+  {
    "path": "banner/kipas/featured/68f5759aef3c0946747dc56d1f284d6ed163b56e3cc3dc8e0f5d937068ed70f3",
    "kind": "banner",
    "size": 95053,
    "sha256": "68f5759aef3c0946747dc56d1f284d6ed163b56e3cc3dc8e0f5d937068ed70f3"
   },
   {
+   "path": "banner/kipas/featured/931ea66ca919b3ddc5140742703ca41e037ac171994484f1bc606a9f4b048724",
+   "kind": "banner",
+   "size": 6165,
+   "sha256": "931ea66ca919b3ddc5140742703ca41e037ac171994484f1bc606a9f4b048724"
+  },
+  {
    "path": "banner/kipas/featured/de20f8164e11834fe982eba6b07d38ca2a3b5f52a6c3af767f9337466f9f91ab",
    "kind": "banner",
    "size": 31541,
    "sha256": "de20f8164e11834fe982eba6b07d38ca2a3b5f52a6c3af767f9337466f9f91ab"
+  },
+  {
+   "path": "banner/kipas/highlight/2b0fe47ded41262b9466a938fe3feac9601969aa70b3944150314153e36944fe",
+   "kind": "banner",
+   "size": 6161,
+   "sha256": "2b0fe47ded41262b9466a938fe3feac9601969aa70b3944150314153e36944fe"
   },
   {
    "path": "banner/kipas/highlight/8b7aa0b2dac6116c9f871cc2af47856b1b0ddf692d12e69223396cf00e06ef77",
@@ -388,6 +412,12 @@
    "sha256": "c9e74fc4e044e3cdae1220c7d791f1d798933a2d1166fc5d1ca53fc10efdc019"
   },
   {
+   "path": "banner/kipas/legend/316d31970752559e3417ec5772d3d0f7963eb0646074f3e2312b306f0778a2e3",
+   "kind": "banner",
+   "size": 6080,
+   "sha256": "316d31970752559e3417ec5772d3d0f7963eb0646074f3e2312b306f0778a2e3"
+  },
+  {
    "path": "banner/kipas/legend/d5a4899802ba35f03c2b79b648a3e07f10f4d8dc247c7e501ef828dcc7217a96",
    "kind": "banner",
    "size": 98404,
@@ -398,6 +428,12 @@
    "kind": "banner",
    "size": 33132,
    "sha256": "e739b6c40f099317c22898893c0d848e2bb7852773e14a06fed2914fe5f92145"
+  },
+  {
+   "path": "banner/kipas/potd/632b3925264b8b8d4c78485049152b78984c99dae821afddcd34dfd412c41c49",
+   "kind": "banner",
+   "size": 5829,
+   "sha256": "632b3925264b8b8d4c78485049152b78984c99dae821afddcd34dfd412c41c49"
   },
   {
    "path": "banner/kipas/potd/9dcc6c3c8a9c24914bc6fbe514f0b265fd4e8ed5df7ea9440e9fbcd6ce2f92e4",
@@ -412,6 +448,12 @@
    "sha256": "c7b4cc0a51f80b0553caf79f5272f3ef29b69f9cc87c0e2d22bb164ff92f3278"
   },
   {
+   "path": "banner/kipas/potm/0a1887dd73cfc1fd5cfd1be5670e6e352ba45ffaf2b324922f200aa12581065a",
+   "kind": "banner",
+   "size": 5896,
+   "sha256": "0a1887dd73cfc1fd5cfd1be5670e6e352ba45ffaf2b324922f200aa12581065a"
+  },
+  {
    "path": "banner/kipas/potm/d77dfea221b3e490154603cec7f724b31bc92585c312ad39cb4d5d94a078e736",
    "kind": "banner",
    "size": 28255,
@@ -422,6 +464,12 @@
    "kind": "banner",
    "size": 83315,
    "sha256": "dd8314fde9c666bdd9389d20474fdede5d6dfdbf050ca9c31bab83a72ab351d5"
+  },
+  {
+   "path": "banner/kipas/pots/24bc1cde86ea2b5f404e7cdf9f9bf0bf5b364891bc0c5d9268d7569f9a433da8",
+   "kind": "banner",
+   "size": 6030,
+   "sha256": "24bc1cde86ea2b5f404e7cdf9f9bf0bf5b364891bc0c5d9268d7569f9a433da8"
   },
   {
    "path": "banner/kipas/pots/8ca7151da0b2b090aca73b4b4181812dfd444711f5c97fa26a2da8004658ce53",
@@ -442,6 +490,12 @@
    "sha256": "1c6c7a03033e9fc2a4dac5d7299c39d79526030013eeb4807ebdcedb7f79e259"
   },
   {
+   "path": "banner/kipas/potw/c188a99dcea020a543044b74ef59337049ec69fa85ea4af030cc2f74f14a95ba",
+   "kind": "banner",
+   "size": 5919,
+   "sha256": "c188a99dcea020a543044b74ef59337049ec69fa85ea4af030cc2f74f14a95ba"
+  },
+  {
    "path": "banner/kipas/potw/e6e1d7e2352b9263e5a818595248af54fff8f559a16f802e5cfb8d24bca297c5",
    "kind": "banner",
    "size": 29822,
@@ -460,10 +514,22 @@
    "sha256": "a764100479c54397ddf8d7eb8767e44e120386df805c29271b9416c52ec48241"
   },
   {
+   "path": "banner/kipas/show-time/cd6f17870102f84be6a27523efa8a655d639098c2bb74e0fff01ce62362929be",
+   "kind": "banner",
+   "size": 6184,
+   "sha256": "cd6f17870102f84be6a27523efa8a655d639098c2bb74e0fff01ce62362929be"
+  },
+  {
    "path": "banner/kipas/special/524c545c3b15b456a5c0d0195f3bd32b126d01140d7baa5a82b5a410fbf5790f",
    "kind": "banner",
    "size": 36317,
    "sha256": "524c545c3b15b456a5c0d0195f3bd32b126d01140d7baa5a82b5a410fbf5790f"
+  },
+  {
+   "path": "banner/kipas/special/56afe88487724c7e36d89b255db878449452a6ccc8c25d5805569f141fd319be",
+   "kind": "banner",
+   "size": 25079,
+   "sha256": "56afe88487724c7e36d89b255db878449452a6ccc8c25d5805569f141fd319be"
   },
   {
    "path": "banner/kipas/strike-arena/4517493d22c86119b454f20255a8751f801eef30d4857170c85a743f6209b3c3",
@@ -476,6 +542,12 @@
    "kind": "banner",
    "size": 99940,
    "sha256": "4bab56259abfdefa2681cb7e0b0ea22551466d493025d619a203c2c7528e29c6"
+  },
+  {
+   "path": "banner/kipas/strike-arena/ec44e3a3dce7415d67049b2dc91fbf9f8c473ffa30f81bfef57d80567ea1326c",
+   "kind": "banner",
+   "size": 6025,
+   "sha256": "ec44e3a3dce7415d67049b2dc91fbf9f8c473ffa30f81bfef57d80567ea1326c"
   },
   {
    "path": "banner/kipas/telegram/76bf5e8bcf6ec588d761ba4f9061d4723d9ef22e98621f381f4d2924d5dc3af9",
@@ -730,5 +802,5 @@
    "sha256": "b4158958abc75691b7439be88f027685e2ed32ed60c3e74884f95c3fa0b670f4"
   }
  ],
- "total_size": 56331705
+ "total_size": 56423528
 }
