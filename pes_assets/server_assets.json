@@ -520,6 +520,12 @@
    "sha256": "cd6f17870102f84be6a27523efa8a655d639098c2bb74e0fff01ce62362929be"
   },
   {
+   "path": "banner/kipas/special/3f5aa55db9e8797f9c388f21a106b1f170fb9ee525b2d22bd20fa10f8f77ba7e",
+   "kind": "banner",
+   "size": 24093,
+   "sha256": "3f5aa55db9e8797f9c388f21a106b1f170fb9ee525b2d22bd20fa10f8f77ba7e"
+  },
+  {
    "path": "banner/kipas/special/524c545c3b15b456a5c0d0195f3bd32b126d01140d7baa5a82b5a410fbf5790f",
    "kind": "banner",
    "size": 36317,
@@ -802,5 +808,5 @@
    "sha256": "b4158958abc75691b7439be88f027685e2ed32ed60c3e74884f95c3fa0b670f4"
   }
  ],
- "total_size": 56423528
+ "total_size": 56447621
 }
