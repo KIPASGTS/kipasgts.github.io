@@ -3,258 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIKIPAS | Security Enthusiast & Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        mono: ['"Fira Code"', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            cyan: '#36BCF7',
-                            dark: '#0f172a',
-                            card: '#1e293b',
-                            accent: '#38bdf8'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Nothing Here</title>
     <style>
-        body { background-color: #0f172a; color: #cbd5e1; overflow-x: hidden; }
-        .glow-text { text-shadow: 0 0 8px rgba(56, 189, 248, 0.6); }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.2); border-color: #38bdf8; }
-        
-        /* Animasi kursor berkedip terminal */
-        .cursor-blink { animation: blink 1s step-end infinite; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-
-        /* Loader Pre-screen CSS */
-        #loader { transition: opacity 0.6s ease-out, visibility 0.6s ease-out; }
-        .loader-hidden { opacity: 0; visibility: hidden; }
-
-        /* CSS Animasi Scroll (Masuk & Keluar) */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+            background-color: #f4f4f0;
+            position: relative;
+            user-select: none;
         }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+
+        .bg-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
         }
-        /* Penyesuaian delay berantai agar munculnya gantian */
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
+
+        .floating-roast {
+            position: absolute;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.12);
+            white-space: nowrap;
+            animation: floatAround 10s linear infinite;
+        }
+
+        .content-box {
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 90%;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            color: #222;
+            font-size: 2.2rem;
+        }
+
+        .kidding-text {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ff0055;
+            text-shadow: 3px 3px 0px #000;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: ngejekParah 0.6s infinite alternate ease-in-out;
+        }
+
+        .re-terminal {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #111;
+            color: #00ff41;
+            border: 3px solid #000;
+            box-shadow: 6px 6px 0px #ff0055;
+            padding: 15px 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transform: rotate(1deg);
+            animation: glitchShake 2.5s infinite;
+        }
+
+        .mock-btn {
+            display: inline-block;
+            padding: 14px 34px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #000;
+            background-color: #ffeb3b;
+            border: 3px solid #000;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 6px 6px 0px #000;
+            transform: rotate(-3deg);
+            animation: ledek 1.2s infinite ease-in-out;
+            transition: all 0.15s ease;
+        }
+
+        .mock-btn::after {
+            content: " 🤪";
+        }
+
+        .mock-btn:hover {
+            background-color: #ff5722;
+            color: #fff;
+            transform: scale(1.15) rotate(6deg);
+            box-shadow: 10px 10px 0px #000;
+            animation: none;
+        }
+
+        .mock-btn:hover::after {
+            content: " 😜👉";
+        }
+
+        .mock-btn:active {
+            transform: scale(0.95) rotate(0deg);
+            box-shadow: 2px 2px 0px #000;
+        }
+
+        @keyframes ledek {
+            0%, 100% { transform: rotate(-3deg) translateY(0); }
+            25% { transform: rotate(3deg) translateY(-6px); }
+            50% { transform: rotate(-4deg) translateY(0); }
+            75% { transform: rotate(2deg) translateY(-4px); }
+        }
+
+        @keyframes ngejekParah {
+            0% { transform: scale(1) rotate(-4deg) skewX(-5deg); color: #ff0055; }
+            50% { transform: scale(1.12) rotate(4deg) skewX(5deg); color: #ff9900; }
+            100% { transform: scale(0.95) rotate(-2deg) skewX(-8deg); color: #d600ff; }
+        }
+
+        @keyframes glitchShake {
+            0%, 100% { transform: rotate(1deg) translate(0, 0); }
+            92% { transform: rotate(1deg) translate(0, 0); }
+            94% { transform: rotate(-2deg) translate(-4px, 2px); }
+            96% { transform: rotate(2deg) translate(4px, -2px); }
+            98% { transform: rotate(0deg) translate(-2px, -2px); }
+        }
+
+        @keyframes floatAround {
+            0% { transform: translateY(100vh) rotate(-10deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-20vh) rotate(10deg); opacity: 0; }
+        }
     </style>
 </head>
-<body class="font-mono antialiased min-h-screen flex flex-col">
+<body>
+    <div class="bg-layer" id="bgLayer"></div>
 
-    <!-- Preloader / Loading Screen -->
-    <div id="loader" class="fixed inset-0 bg-brand-dark z-[9999] flex flex-col items-center justify-center">
-        <i class="fas fa-circle-notch fa-spin text-5xl text-brand-cyan mb-4 glow-text"></i>
-        <p class="text-brand-accent animate-pulse font-bold tracking-widest">[ INITIALIZING SECURE PAYLOAD... ]</p>
+    <div class="content-box">
+        <h1>Nothing available here 🙄</h1>
+        <div class="kidding-text">Are you kidding me?! 🤡</div>
+        <div class="re-terminal" id="roastBox">
+            [0xDEADCAFE]: Still searching for plaintext strings in binary? Good luck lol.
+        </div>
+        <a href="https://t.me/kipascommunity" class="mock-btn">Click me</a>
     </div>
 
-    <!-- Header / Nav -->
-    <nav class="w-full px-6 py-4 border-b border-slate-800 bg-brand-dark bg-opacity-95 sticky top-0 z-50 backdrop-blur-md transition-all duration-500 reveal active">
-        <div class="max-w-5xl mx-auto flex justify-between items-start md:items-center">
-            <!-- Terminal Text Area with fixed height -->
-            <div class="h-20 flex flex-col justify-center">
-                <div id="terminal-text" class="text-sm md:text-lg font-bold text-white glow-text leading-tight"></div>
-            </div>
-            
-            <div class="space-x-4 text-xl flex items-center h-20">
-                <a href="https://www.youtube.com/@kipasgts" target="_blank" class="text-red-500 hover:text-red-400 transition"><i class="fab fa-youtube"></i></a>
-                <a href="https://dsc.gg/sikipas" target="_blank" class="text-indigo-500 hover:text-indigo-400 transition"><i class="fab fa-discord"></i></a>
-                <a href="https://github.com/kipasgts" target="_blank" class="text-white hover:text-gray-300 transition"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="flex-grow max-w-5xl mx-auto w-full p-6 mt-4 space-y-20">
-        
-        <!-- Hero Section -->
-        <section class="space-y-6 reveal">
-            <h1 class="text-5xl md:text-6xl font-bold text-white mb-2">Hi there, I'm <span class="text-brand-accent glow-text">SIKIPAS</span></h1>
-            <h3 class="text-xl md:text-2xl text-slate-400 border-l-4 border-brand-accent pl-4">Software Developer | Reverse Engineer | Security Enthusiast</h3>
-            
-            <p class="text-lg leading-relaxed mt-6 max-w-3xl">
-                I am a 25-year-old developer with a deep passion for exploring how things work under the hood. My journey involves everything from reverse engineering and building custom game server architectures to developing full-stack web applications and security testing tools.
-            </p>
-            <p class="text-lg leading-relaxed max-w-3xl">
-                Beyond development, <strong class="text-white">I have a massive obsession with application and web security.</strong> I love the thrill of discovering vulnerabilities—and I'll admit, I have a bit of a mischievous streak! When I successfully breach a system or find a critical flaw, I enjoy pulling off clever pranks to prove a point. Much of my free time is spent hunting for loopholes and crafting custom exploits to push the absolute limits of game servers.
-            </p>
-            <p class="text-lg leading-relaxed max-w-3xl">
-                To keep up with complex challenges, I strongly leverage <strong class="text-brand-cyan">AI-Assisted Development</strong> and <strong class="text-brand-cyan">Prompt Engineering</strong> in my daily workflow to accelerate coding and debugging.
-            </p>
-        </section>
-
-        <!-- Tech Stack & Tools -->
-        <section class="grid md:grid-cols-2 gap-8">
-            <div class="bg-brand-card p-6 rounded-lg border border-slate-700 reveal">
-                <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-600 pb-2"><i class="fas fa-code text-brand-accent mr-2"></i>Tech Stack</h2>
-                <ul class="space-y-2">
-                    <li><span class="text-brand-accent font-bold">Languages:</span> C++, Python 3, Node.js, PHP</li>
-                    <li><span class="text-brand-accent font-bold">Databases:</span> MySQL</li>
-                    <li><span class="text-brand-accent font-bold">Specialties:</span> Reverse Engineering, Memory Hooking, Protocol Analysis, Exploit Dev</li>
-                </ul>
-            </div>
-            
-            <div class="bg-brand-card p-6 rounded-lg border border-slate-700 reveal delay-100">
-                <h2 class="text-2xl font-bold text-white mb-4 border-b border-slate-600 pb-2"><i class="fas fa-toolbox text-brand-accent mr-2"></i>Tools & Software</h2>
-                <ul class="space-y-2">
-                    <li><span class="text-brand-accent font-bold">Dev & Ops:</span> VS Code, Termius</li>
-                    <li><span class="text-brand-accent font-bold">Reverse Engineering:</span> IDA Pro, HxD Editor</li>
-                    <li><span class="text-brand-accent font-bold">Net & Security:</span> Burp Suite, Proxyman, ProxyPin, mitmproxy</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section>
-            <h2 class="text-3xl font-bold text-white mb-8 reveal"><i class="fas fa-rocket text-brand-accent mr-3"></i>Highlighted Projects</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                
-                <!-- FFKIPAS -->
-                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 reveal">
-                    <img src="https://www.ffkipas.my.id/assets/images/favicon/favicon.svg?v=1.0" class="w-12 h-12 rounded bg-white p-1" alt="FFKIPAS">
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">FFKIPAS</h3>
-                        <p class="text-sm text-slate-400 mb-2">Free Fire Private Server</p>
-                        <p class="text-sm">Developed a custom server architecture handling game logic, protocol decoding, and server-side management.</p>
-                    </div>
-                </div>
-
-                <!-- KIPASGUYS (Reverted to original image) -->
-                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 reveal delay-100">
-                    <img src="https://kipasguys.club/wp-content/uploads/2024/10/kipas-guys.png" class="w-12 h-12 rounded bg-slate-800 p-1" alt="KIPASGUYS">
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">KIPASGUYS</h3>
-                        <p class="text-sm text-slate-400 mb-2">Stumble Guys PS + Mod Menu</p>
-                        <p class="text-sm">A custom multiplayer private server integrated with an internal mod menu, built by reverse engineering game logic.</p>
-                    </div>
-                </div>
-
-                <!-- GTPS -->
-                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 reveal">
-                    <img src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" class="w-12 h-12 rounded bg-white p-1" alt="GTPS">
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">GTPS</h3>
-                        <p class="text-sm text-slate-400 mb-2">Growtopia Private Server</p>
-                        <p class="text-sm">Engineered custom backend systems to support complex game mechanics, item economies, and real-time networking.</p>
-                    </div>
-                </div>
-
-                <!-- Automated Pentester Tool -->
-                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 reveal delay-100">
-                    <div class="w-12 h-12 flex items-center justify-center rounded bg-slate-800">
-                        <i class="fas fa-shield-virus text-3xl text-red-500 drop-shadow-md"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Automated Pentester Tool</h3>
-                        <p class="text-sm text-slate-400 mb-2">Vulnerability Scanner</p>
-                        <p class="text-sm">Engineered a mass vulnerability scanning and automated injection tool designed to test web application security.</p>
-                    </div>
-                </div>
-
-                <!-- Mod Menus & Exploits -->
-                <div class="bg-brand-card p-6 rounded-lg border border-slate-700 transition duration-300 card-hover flex items-start space-x-4 md:col-span-2 lg:col-span-1 reveal">
-                    <div class="w-12 h-12 flex items-center justify-center rounded bg-slate-800">
-                        <i class="fas fa-syringe text-3xl text-purple-500 drop-shadow-md"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">In-Game Mod Menus & Exploits</h3>
-                        <p class="text-sm text-slate-400 mb-2">C++ Hooks & Network Exploits</p>
-                        <p class="text-sm">Developed internal C++ injected mod menus and crafted custom network exploits for various games.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="w-full text-center p-6 border-t border-slate-800 mt-12 text-slate-500 text-sm reveal">
-        <p>&copy; 2026 SIKIPAS. Built with caffeine, curiosity, and AI.</p>
-    </footer>
-
-    <!-- Scripts (Loader, Scroll Reveal, Terminal Animation) -->
     <script>
-        // 1. Page Load Animation / Preloader
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('loader');
-            // Sedikit delay (0.8 detik) agar aura terminal-nya terasa
-            setTimeout(() => {
-                loader.classList.add('loader-hidden');
-            }, 800);
-        });
+        const reRoasts = [
+            "[0xDEADCAFE]: Still searching for plaintext strings in binary? Good luck lol.",
+            "[PTRACE_DENIED]: Nice debugger attachment attempt. Did your tutorial skip anti-tamper?",
+            "[SEGFAULT_IQ]: Bro opened Ghidra once and thinks he can bypass the checksum.",
+            "[XREF_NOT_FOUND]: Looking for cross-references? The only xref here points to your skill issue.",
+            "[FRIDA_DETECTED]: Your copy-pasted hook script just got nuked at offset 0x0000DEAD.",
+            "[STRIPPED_ELF]: Imagine crying over a stripped binary with bogus control flow flattening.",
+            "[BAD_METADATA]: Did your memory dump fail again? Go rebuild that corrupted header, kiddo.",
+            "[NOP_SLIDE]: Patching conditional jumps with 0x90 won't fix your brain's logic error.",
+            "[XOR_LAUGHING]: Defeated by a simple dynamic XOR key and custom VM opcode? Pathetic.",
+            "[IDA_FREEWARE]: Stare at that decompiled pseudocode all day, you still won't find the caller."
+        ];
 
-        // 2. Scroll Animation (Masuk & Keluar) memakai Intersection Observer
-        const observerOptions = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.15 // Animasi terpicu saat 15% elemen terlihat di layar
-        };
+        const bgFloatingTerms = [
+            "0xDEADBEEF", "sub_401000()", "libil2cpp.so", "Ptrace_Traceme", 
+            "Skill Issue Detected", "Corrupted VTable", "Fake Offset Lmao", 
+            "Anti-Dump Triggered", "Stack Smashing", "0x90 0x90 0x90", 
+            "No Xrefs For You", "Obfuscated Trash", "Nice Breakpoint Bro"
+        ];
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Muncul (Fade In Up)
-                    entry.target.classList.add('active');
-                } else {
-                    // Hilang (Fade Out Down) saat keluar dari viewport
-                    entry.target.classList.remove('active');
-                }
-            });
-        }, observerOptions);
+        const roastBox = document.getElementById("roastBox");
+        let currentIndex = 0;
 
-        // Pasang observer ke semua elemen dengan class 'reveal'
-        document.querySelectorAll('.reveal').forEach((el) => {
-            observer.observe(el);
-        });
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % reRoasts.length;
+            roastBox.textContent = reRoasts[currentIndex];
+        }, 2800);
 
-        // 3. Script Animasi Mengetik (Header)
-        const terminal = document.getElementById('terminal-text');
-        const cursor = '<span class="cursor-blink text-brand-accent">_</span>';
-        const prompt = '<span class="text-brand-cyan">root@sikipas</span><span class="text-white">:</span><span class="text-blue-400">~</span><span class="text-white"># </span>';
-
-        const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
-        async function runTerminalAnimation() {
-            while (true) {
-                terminal.innerHTML = prompt + cursor;
-                await sleep(1500);
-
-                let cmd1 = "whoami";
-                for (let i = 1; i <= cmd1.length; i++) {
-                    terminal.innerHTML = prompt + cmd1.substring(0, i) + cursor;
-                    await sleep(150);
-                }
-                await sleep(500);
-
-                let output = "<br><span class='text-slate-300 font-normal'>hacker</span><br>" + prompt;
-                terminal.innerHTML = prompt + cmd1 + output + cursor;
-                await sleep(2000);
-
-                let cmd2 = "clear";
-                for (let i = 1; i <= cmd2.length; i++) {
-                    terminal.innerHTML = prompt + cmd1 + output + cmd2.substring(0, i) + cursor;
-                    await sleep(150);
-                }
-                await sleep(800);
-            }
+        const bgLayer = document.getElementById("bgLayer");
+        for (let i = 0; i < 18; i++) {
+            const span = document.createElement("span");
+            span.className = "floating-roast";
+            span.textContent = bgFloatingTerms[Math.floor(Math.random() * bgFloatingTerms.length)];
+            span.style.left = Math.random() * 90 + "vw";
+            span.style.fontSize = (Math.random() * 1.2 + 0.8) + "rem";
+            span.style.animationDuration = (Math.random() * 6 + 6) + "s";
+            span.style.animationDelay = (Math.random() * 5) + "s";
+            bgLayer.appendChild(span);
         }
-        runTerminalAnimation();
     </script>
-
 </body>
 </html>
